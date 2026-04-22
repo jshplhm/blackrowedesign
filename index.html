@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackrowe Design — Commercial Spatial Design</title>
+<meta name="description" content="Blackrowe Design helps businesses turn commercial spaces into environments that guide customers, support teams, and reflect the brand. Serving Sacramento, Reno, and Lake Tahoe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0e0e0d;
+  --off-white: #f5f2ed;
+  --accent: #8b6f47;
+  --accent-light: #d4b896;
+  --rule: rgba(14,14,13,0.11);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--off-white);
+  color: var(--black);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--rule);
+}
+
+nav.scrolled { box-shadow: 0 2px 24px rgba(14,14,13,0.06); }
+
+.nav-logo {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  opacity: 0.45;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover { opacity: 1; }
+
+.nav-cta {
+  opacity: 1 !important;
+  background: var(--black);
+  color: var(--off-white) !important;
+  padding: 0.6rem 1.3rem;
+  transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(--accent) !important; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  padding-top: 4.5rem;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7rem 5rem 7rem 4rem;
+  border-right: 1px solid var(--rule);
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 4.5vw, 5.4rem);
+  font-weight: 300;
+  line-height: 1.07;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+h1 em, h2 em { font-style: italic; color: var(--accent); }
+
+.hero-body {
+  font-size: 1rem;
+  line-height: 1.88;
+  color: rgba(14,14,13,0.58);
+  max-width: 44ch;
+  margin-bottom: 3rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--black);
+  color: var(--off-white);
+  padding: 0.9rem 1.8rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, gap 0.3s;
+  white-space: nowrap;
+}
+
+.btn:hover { background: var(--accent); gap: 1.1rem; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid rgba(14,14,13,0.25);
+  transition: border-color 0.2s, gap 0.3s;
+}
+
+.btn-ghost:hover { background: transparent; border-color: var(--black); }
+
+/* ── HERO RIGHT — typographic panel ── */
+.hero-right {
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Large background word — purely decorative */
+.hero-bg-word {
+  position: absolute;
+  bottom: -0.15em;
+  right: -0.05em;
+  font-family: var(--serif);
+  font-size: clamp(9rem, 18vw, 22rem);
+  font-weight: 300;
+  color: rgba(245,242,237,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.03em;
+}
+
+.hero-right-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 4rem 3.5rem;
+  justify-content: space-between;
+}
+
+.hero-manifesto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.manifesto-line {
+  border-top: 1px solid rgba(245,242,237,0.1);
+  padding-top: 1.75rem;
+}
+
+.manifesto-line:first-child { border-top: none; padding-top: 0; }
+
+.manifesto-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,242,237,0.28);
+  margin-bottom: 0.6rem;
+}
+
+.manifesto-text {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  font-weight: 300;
+  color: rgba(245,242,237,0.85);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.hero-stats {
+  border-top: 1px solid rgba(245,242,237,0.1);
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.hero-stat {
+  padding-right: 1.5rem;
+  border-right: 1px solid rgba(245,242,237,0.1);
+}
+
+.hero-stat:last-child { border-right: none; padding-right: 0; padding-left: 1rem; }
+.hero-stat:nth-child(2) { padding-left: 1rem; }
+
+.stat-num {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: var(--off-white);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,242,237,0.28);
+  line-height: 1.5;
+}
+
+/* ── SHARED ── */
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.55;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.2vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+/* ── PROBLEM ── */
+.problem {
+  background: var(--black);
+  color: var(--off-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  align-items: center;
+  padding: 8rem 4rem;
+}
+
+.problem .section-label { color: var(--accent-light); }
+.problem .section-label::before { background: var(--accent-light); }
+.problem h2 { color: var(--off-white); }
+
+.problem-body {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(245,242,237,0.58);
+}
+
+.problem-body p + p { margin-top: 1.5rem; }
+
+.problem-points { display: flex; flex-direction: column; }
+
+.problem-point {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(245,242,237,0.08);
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1.25rem;
+}
+
+.problem-point:first-child { border-top: 1px solid rgba(245,242,237,0.08); }
+
+.problem-num {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: rgba(245,242,237,0.18);
+  padding-top: 0.18rem;
+}
+
+.problem-title {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--off-white);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.problem-text {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(245,242,237,0.52);
+}
+
+/* ── SERVICES ── */
+.services {
+  padding: 8rem 4rem;
+}
+
+.services-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: end;
+  margin-bottom: 4.5rem;
+}
+
+.services-intro-note {
+  font-size: 0.95rem;
+  line-height: 1.88;
+  color: rgba(14,14,13,0.58);
+  padding-bottom: 0.2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+}
+
+.svc {
+  background: var(--off-white);
+  padding: 3rem;
+}
+
+.svc.dark {
+  background: var(--black);
+}
+
+.svc-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+.svc.dark .svc-tag { color: var(--accent-light); }
+
+.svc-name {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.svc.dark .svc-name { color: var(--off-white); }
+
+.svc-price {
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: rgba(14,14,13,0.32);
+  margin-bottom: 1.75rem;
+}
+
+.svc.dark .svc-price { color: rgba(245,242,237,0.32); }
+
+.svc-desc {
+  font-size: 0.9rem;
+  line-height: 1.88;
+  color: rgba(14,14,13,0.6);
+  margin-bottom: 2rem;
+}
+
+.svc.dark .svc-desc { color: rgba(245,242,237,0.6); }
+
+.svc-deliverables { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+.svc.dark .svc-deliverables { border-color: rgba(245,242,237,0.1); }
+
+.dlv-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(14,14,13,0.32);
+  margin-bottom: 0.75rem;
+}
+
+.svc.dark .dlv-label { color: rgba(245,242,237,0.32); }
+
+.dlv-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.dlv-item {
+  font-size: 0.72rem;
+  padding: 0.28rem 0.72rem;
+  border: 1px solid rgba(14,14,13,0.12);
+  color: rgba(14,14,13,0.52);
+}
+
+.svc.dark .dlv-item {
+  border-color: rgba(245,242,237,0.14);
+  color: rgba(245,242,237,0.52);
+}
+
+.svc-addon {
+  grid-column: 1 / -1;
+  background: var(--off-white);
+  padding: 2.25rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  border-top: 1px solid var(--rule);
+}
+
+.svc-addon .svc-name { font-size: 1.35rem; margin-bottom: 0.2rem; }
+.svc-addon .svc-desc { margin-bottom: 0; font-size: 0.88rem; max-width: 62ch; }
+
+/* ── WORK ── */
+.work {
+  padding: 8rem 4rem;
+  border-top: 1px solid var(--rule);
+}
+
+.work-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+
+.work-note {
+  font-size: 0.95rem;
+  line-height: 1.88;
+  color: rgba(14,14,13,0.58);
+}
+
+.scenarios { border-top: 1px solid var(--rule); }
+
+.scenario {
+  display: grid;
+  grid-template-columns: 9rem 1fr 1fr;
+  gap: 3.5rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.scenario-type {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 2.1;
+  padding-top: 0.2rem;
+}
+
+.scenario-sqft {
+  font-size: 0.68rem;
+  color: rgba(14,14,13,0.32);
+  letter-spacing: 0.06em;
+}
+
+.scenario-title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.scenario-body {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: rgba(14,14,13,0.56);
+  margin-bottom: 0.75rem;
+}
+
+.scenario-note {
+  font-size: 0.72rem;
+  color: rgba(14,14,13,0.28);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.challenge-list { display: flex; flex-direction: column; gap: 0.9rem; padding-top: 0.2rem; }
+
+.challenge {
+  display: flex;
+  gap: 0.85rem;
+  font-size: 0.85rem;
+  color: rgba(14,14,13,0.56);
+  line-height: 1.6;
+}
+
+.challenge-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 0.58rem;
+  flex-shrink: 0;
+  opacity: 0.55;
+}
+
+/* ── ABOUT ── */
+.about {
+  background: var(--black);
+  padding: 8rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.about .section-label { color: var(--accent-light); }
+.about .section-label::before { background: var(--accent-light); }
+.about h2 { color: var(--off-white); margin-bottom: 2.5rem; }
+
+/* Left panel — typographic treatment instead of photo */
+.about-left {
+  position: relative;
+}
+
+.about-manifesto {
+  border: 1px solid rgba(245,242,237,0.1);
+  padding: 3.5rem;
+  position: relative;
+}
+
+.about-manifesto::before {
+  content: '\201C';
+  font-family: var(--serif);
+  font-size: 8rem;
+  color: rgba(245,242,237,0.06);
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.about-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(245,242,237,0.82);
+  line-height: 1.45;
+  margin-bottom: 2rem;
+}
+
+.about-quote-attr {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(245,242,237,0.28);
+}
+
+.about-credentials {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.credential {
+  display: flex;
+  gap: 1.25rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(245,242,237,0.07);
+}
+
+.credential:first-child { border-top: 1px solid rgba(245,242,237,0.07); }
+
+.credential-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245,242,237,0.25);
+  min-width: 7rem;
+}
+
+.credential-value {
+  font-size: 0.88rem;
+  color: rgba(245,242,237,0.6);
+}
+
+.about-body {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(245,242,237,0.6);
+}
+
+.about-body p + p { margin-top: 1.5rem; }
+
+.about-sig {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(245,242,237,0.1);
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(245,242,237,0.38);
+}
+
+.about-location {
+  margin-top: 0.4rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245,242,237,0.22);
+}
+
+/* ── CONTACT ── */
+.contact {
+  padding: 8rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: start;
+  border-top: 1px solid var(--rule);
+}
+
+.contact h2 { margin-bottom: 1.25rem; }
+
+.contact-body {
+  font-size: 0.95rem;
+  line-height: 1.88;
+  color: rgba(14,14,13,0.58);
+  margin-bottom: 2.75rem;
+  max-width: 42ch;
+}
+
+.contact-details { display: flex; flex-direction: column; gap: 0; }
+
+.contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+
+.contact-row:first-child { border-top: 1px solid var(--rule); }
+
+.contact-row-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(14,14,13,0.3);
+  min-width: 4.5rem;
+}
+
+.contact-row a {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(14,14,13,0.15);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-row a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ── FORM ── */
+.form { display: flex; flex-direction: column; gap: 1.75rem; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-field { display: flex; flex-direction: column; gap: 0.45rem; }
+
+.form-field label {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(14,14,13,0.35);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(14,14,13,0.14);
+  padding: 0.72rem 0;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--black);
+  outline: none;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  transition: border-color 0.2s;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(14,14,13,0.25); }
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus { border-color: var(--accent); }
+
+.form-field textarea { resize: none; min-height: 7rem; }
+
+.form-submit {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  background: var(--black);
+  color: var(--off-white);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, gap 0.3s;
+  margin-top: 0.25rem;
+}
+
+.form-submit:hover { background: var(--accent); gap: 1.1rem; }
+.form-submit:disabled { background: var(--accent); cursor: default; }
+
+.form-success {
+  display: none;
+  padding: 1.5rem;
+  border: 1px solid rgba(14,14,13,0.12);
+  font-size: 0.9rem;
+  color: rgba(14,14,13,0.65);
+  line-height: 1.7;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 2rem 4rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 0.92rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  color: rgba(14,14,13,0.3);
+  letter-spacing: 0.04em;
+}
+
+/* ── REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── HERO LOAD ANIMATION ── */
+.hero-left > * {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-left > *:nth-child(2) { animation-delay: 0.22s; }
+.hero-left > *:nth-child(3) { animation-delay: 0.34s; }
+.hero-left > *:nth-child(4) { animation-delay: 0.46s; }
+
+.hero-right-content > * {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.hero-right-content > *:nth-child(1) { animation-delay: 0.35s; }
+.hero-right-content > *:nth-child(2) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .nav-links { display: none; }
+
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 8rem 1.5rem 4rem; border-right: none; border-bottom: 1px solid var(--rule); }
+  .hero-right { min-height: auto; }
+  .hero-right-content { padding: 2.5rem 1.5rem; }
+  .hero-stats { grid-template-columns: repeat(3,1fr); gap: 0; }
+  .hero-bg-word { font-size: 8rem; }
+
+  .problem { grid-template-columns: 1fr; gap: 3.5rem; padding: 5rem 1.5rem; }
+  .services { padding: 5rem 1.5rem; }
+  .services-top { grid-template-columns: 1fr; gap: 2rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .svc-addon { flex-direction: column; gap: 1rem; }
+
+  .work { padding: 5rem 1.5rem; }
+  .work-top { grid-template-columns: 1fr; gap: 2rem; }
+  .scenario { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  .about { grid-template-columns: 1fr; gap: 4rem; padding: 5rem 1.5rem; }
+  .contact { grid-template-columns: 1fr; gap: 4rem; padding: 5rem 1.5rem; }
+  .form-row { grid-template-columns: 1fr; gap: 1.75rem; }
+
+  footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Blackrowe Design</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="eyebrow">Commercial Spatial Design</p>
+    <h1>Your space is either<br>working for your<br>business —<br><em>or against it.</em></h1>
+    <p class="hero-body">Before a single contractor is hired, Blackrowe Design helps businesses turn leased and purchased commercial spaces into environments that guide customers, support teams, and reflect the brand.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn">Free consultation →</a>
+      <a href="#services" class="btn btn-ghost">See services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-bg-word">Space</div>
+    <div class="hero-right-content">
+      <div class="hero-manifesto">
+        <div class="manifesto-line">
+          <div class="manifesto-label">The discipline</div>
+          <div class="manifesto-text">How people move, pause, gather, and leave — designed with intention.</div>
+        </div>
+        <div class="manifesto-line">
+          <div class="manifesto-label">The outcome</div>
+          <div class="manifesto-text">Every square foot earning its place.</div>
+        </div>
+        <div class="manifesto-line">
+          <div class="manifesto-label">The difference</div>
+          <div class="manifesto-text">We think like a business owner, not a decorator.</div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stat-num">$750</div>
+          <div class="stat-label">Engagements from</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Service types</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">Free</div>
+          <div class="stat-label">First consultation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem reveal">
+  <div>
+    <p class="section-label">The problem</p>
+    <h2>Space design isn't<br>decoration.<br><em>It's operations.</em></h2>
+    <div class="problem-body">
+      <p>Most businesses treat space as an afterthought. They sign a lease, hire a contractor, and start moving furniture. Then they wonder why the checkout line creates a bottleneck, why customers walk past the highest-margin display, or why the team avoids the conference room.</p>
+      <p>Every square foot of a commercial space is either earning or costing you. The difference is spatial design — how people move, pause, engage, and leave.</p>
+    </div>
+  </div>
+  <div class="problem-points">
+    <div class="problem-point">
+      <span class="problem-num">01</span>
+      <div>
+        <div class="problem-title">You just signed a lease</div>
+        <div class="problem-text">Before you build anything out, a spatial audit will save you from expensive decisions you can't undo later.</div>
+      </div>
+    </div>
+    <div class="problem-point">
+      <span class="problem-num">02</span>
+      <div>
+        <div class="problem-title">Your current space isn't working</div>
+        <div class="problem-text">Customers aren't moving through it the way you need them to. Something's off and you can't name it.</div>
+      </div>
+    </div>
+    <div class="problem-point">
+      <span class="problem-num">03</span>
+      <div>
+        <div class="problem-title">You're rebranding or expanding</div>
+        <div class="problem-text">Your space needs to catch up with what your business has become.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services reveal" id="services">
+  <div class="services-top">
+    <div>
+      <p class="section-label">Services</p>
+      <h2>Two ways to<br>work together</h2>
+    </div>
+    <p class="services-intro-note">I work with retail, hospitality, wellness, and professional office clients throughout the Sacramento–Reno–Tahoe corridor, and take select remote engagements. Every project begins with a free consultation.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc">
+      <span class="svc-tag">Entry offering</span>
+      <div class="svc-name">Space Flow Audit</div>
+      <div class="svc-price">Starting at $750 · remote or on-site</div>
+      <p class="svc-desc">An objective, outside-eye analysis of how your space functions for customers and staff. I review your floor plan, circulation patterns, sight lines, zoning, and friction points — then deliver a written report with annotated diagrams and a prioritized list of recommendations.</p>
+      <div class="svc-deliverables">
+        <div class="dlv-label">What you receive</div>
+        <div class="dlv-list">
+          <span class="dlv-item">Annotated floor plan</span>
+          <span class="dlv-item">Friction point analysis</span>
+          <span class="dlv-item">Priority recommendations</span>
+          <span class="dlv-item">30-min debrief call</span>
+        </div>
+      </div>
+    </div>
+    <div class="svc dark">
+      <span class="svc-tag">Core offering</span>
+      <div class="svc-name">Commercial Design Package</div>
+      <div class="svc-price">$3,500–$7,500 · scoped per project</div>
+      <p class="svc-desc">A complete spatial design concept — from zoning and customer flow strategy through furniture layout, material direction, lighting approach, and wayfinding. Everything you need to brief contractors and vendors with confidence.</p>
+      <div class="svc-deliverables">
+        <div class="dlv-label">What you receive</div>
+        <div class="dlv-list">
+          <span class="dlv-item">Spatial concept document</span>
+          <span class="dlv-item">Zoning + flow plan</span>
+          <span class="dlv-item">Furniture layout</span>
+          <span class="dlv-item">Finish direction</span>
+          <span class="dlv-item">Lighting strategy</span>
+          <span class="dlv-item">Vendor brief template</span>
+        </div>
+      </div>
+    </div>
+    <div class="svc-addon">
+      <div>
+        <span class="svc-tag">Add-on</span>
+        <div class="svc-name">Design Management</div>
+        <p class="svc-desc">Once your concept is approved, I stay involved through implementation — coordinating contractors, sourcing vendors, keeping design intent intact from plan to opening day. Quoted per project as an add-on to the Design Package.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="work reveal" id="work">
+  <div class="work-top">
+    <div>
+      <p class="section-label">Work</p>
+      <h2>How the<br>thinking works</h2>
+    </div>
+    <p class="work-note">These are worked spatial scenarios — real business types, real constraints, real decisions. They show how I approach a space before touching a single finish selection.</p>
+  </div>
+  <div class="scenarios">
+
+    <div class="scenario">
+      <div>
+        <div class="scenario-type">Wellness<br>Studio</div>
+        <div class="scenario-sqft">1,400 sq ft</div>
+      </div>
+      <div>
+        <h3 class="scenario-title">New yoga and massage studio, strip mall lease</h3>
+        <p class="scenario-body">A long rectangular space with a single entrance. The challenge: create clear separation between retail, active studio, and treatment rooms — without expensive construction — while delivering a calm, premium feel from the moment you walk in.</p>
+        <p class="scenario-note">↳ Spatial concept · floor plan · finish direction</p>
+      </div>
+      <div class="challenge-list">
+        <div class="challenge"><span class="challenge-dot"></span>Entry zone slows arrival and signals transition from street to studio</div>
+        <div class="challenge"><span class="challenge-dot"></span>Treatment rooms acoustically separated using built-ins, not walls</div>
+        <div class="challenge"><span class="challenge-dot"></span>Retail placed at natural pause point in customer flow</div>
+        <div class="challenge"><span class="challenge-dot"></span>Natural light preserved and amplified throughout</div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div>
+        <div class="scenario-type">Independent<br>Café</div>
+        <div class="scenario-sqft">900 sq ft</div>
+      </div>
+      <div>
+        <h3 class="scenario-title">First-time café owner, former retail space</h3>
+        <p class="scenario-body">High foot traffic corner location. Priorities: fast throughput at peak hours, a reason to stay and spend more, and a spatial identity that feels local and considered — not generic.</p>
+        <p class="scenario-note">↳ Spatial concept · floor plan · finish direction</p>
+      </div>
+      <div class="challenge-list">
+        <div class="challenge"><span class="challenge-dot"></span>Order and pickup separated to eliminate queue conflict</div>
+        <div class="challenge"><span class="challenge-dot"></span>Seating zoned by dwell time — quick solo, lingering social</div>
+        <div class="challenge"><span class="challenge-dot"></span>Window seating activated as street-visible amenity</div>
+        <div class="challenge"><span class="challenge-dot"></span>Merchandise placed at natural exit pause point</div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div>
+        <div class="scenario-type">Professional<br>Office</div>
+        <div class="scenario-sqft">2,200 sq ft</div>
+      </div>
+      <div>
+        <h3 class="scenario-title">Boutique law firm, newly leased floor</h3>
+        <p class="scenario-body">A firm moving from shared space into its first dedicated floor. Needs to signal credibility from arrival while giving attorneys the privacy they require — without a closed-corridor feel.</p>
+        <p class="scenario-note">↳ Spatial concept · floor plan · finish direction</p>
+      </div>
+      <div class="challenge-list">
+        <div class="challenge"><span class="challenge-dot"></span>Reception designed as a composed arrival, not a waiting room</div>
+        <div class="challenge"><span class="challenge-dot"></span>Conference room accessible to clients without exposing working areas</div>
+        <div class="challenge"><span class="challenge-dot"></span>Offices acoustically separated by material, not distance</div>
+        <div class="challenge"><span class="challenge-dot"></span>Finishes calibrated to signal expertise without coldness</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about reveal" id="about">
+  <div class="about-left">
+    <div class="about-manifesto">
+      <p class="about-quote">No amount of pretty can fix a space that doesn't work. Get the spatial logic right first — everything else follows.</p>
+      <div class="about-quote-attr">— Design philosophy, Blackrowe Design</div>
+    </div>
+    <div class="about-credentials">
+      <div class="credential">
+        <span class="credential-label">Discipline</span>
+        <span class="credential-value">Commercial spatial design</span>
+      </div>
+      <div class="credential">
+        <span class="credential-label">Approach</span>
+        <span class="credential-value">Business-first, then aesthetics</span>
+      </div>
+      <div class="credential">
+        <span class="credential-label">Based in</span>
+        <span class="credential-value">Nevada City, California</span>
+      </div>
+      <div class="credential">
+        <span class="credential-label">Serving</span>
+        <span class="credential-value">Sacramento · Reno · Tahoe · Remote</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p class="section-label">About</p>
+    <h2>I think like a<br><em>business owner.</em></h2>
+    <div class="about-body">
+      <p>I'm Josh Pelham, a commercial spatial design consultant based in the Sierra Nevada foothills of Northern California. My path into spatial design isn't a traditional one — and I think that's an asset.</p>
+      <p>I came at it from two directions: a genuine obsession with how spaces make people feel and behave, and a business owner's instinct for what actually drives outcomes. That combination means I think about your space differently than a decorator would.</p>
+      <p>I'm not selling you a look. I'm helping you build an environment that serves your customers better, supports your team, and represents your brand without you having to explain it.</p>
+      <p>Most projects begin with a free consultation — no pitch, just a conversation about your space and what you're trying to accomplish.</p>
+    </div>
+    <div class="about-sig">— Josh Pelham</div>
+    <div class="about-location">Nevada City, California</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact reveal" id="contact">
+  <div>
+    <p class="section-label">Contact</p>
+    <h2>Start with a<br>conversation.</h2>
+    <p class="contact-body">The first step is free and zero-pressure. Tell me about your space — what you're planning, what's not working, or what you're trying to accomplish — and we'll figure out together whether and how I can help.</p>
+    <div class="contact-details">
+      <div class="contact-row">
+        <span class="contact-row-label">Call or text</span>
+        <a href="tel:5305577879">530-557-7879</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-row-label">Based in</span>
+        <span>Nevada City, CA</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-row-label">Serving</span>
+        <span>Sacramento · Reno · Tahoe · Remote</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    FORM SETUP INSTRUCTIONS:
+    1. Go to formspree.io and sign up free
+    2. Create a new form — set the email to jshplhm@gmail.com
+    3. Copy your form endpoint (looks like https://formspree.io/f/xxxxxxxx)
+    4. Replace "YOUR_FORMSPREE_ID" below with just the xxxxxxxx part
+  -->
+  <div>
+    <form
+      class="form"
+      id="contact-form"
+      action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+      method="POST"
+    >
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-field">
+          <label for="business">Business name</label>
+          <input type="text" id="business" name="business" placeholder="Smith & Co.">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jane@smithco.com" required>
+      </div>
+      <div class="form-field">
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="(530) 555-0100">
+      </div>
+      <div class="form-field">
+        <label for="type">Type of space</label>
+        <select id="type" name="type">
+          <option value="" disabled selected>Select one</option>
+          <option>Retail</option>
+          <option>Restaurant or café</option>
+          <option>Hospitality or wellness</option>
+          <option>Professional office</option>
+          <option>Other commercial</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="message">Tell me about your space</label>
+        <textarea id="message" name="message" placeholder="What are you working with, and what's the challenge or goal?"></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="submit-btn">Send message →</button>
+    </form>
+    <div class="form-success" id="form-success">
+      Message received — I'll be in touch within one business day. You can also reach me directly at <a href="tel:5305577879">530-557-7879</a>.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Blackrowe Design</span>
+  <span class="footer-copy">© 2026 Blackrowe Design · Nevada City, California</span>
+</footer>
+
+<script>
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Form — handles both Formspree AJAX and fallback
+  const form = document.getElementById('contact-form');
+  const successMsg = document.getElementById('form-success');
+  const submitBtn = document.getElementById('submit-btn');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      } else {
+        submitBtn.textContent = 'Something went wrong — please call or text 530-557-7879';
+        submitBtn.disabled = false;
+      }
+    } catch {
+      submitBtn.textContent = 'Something went wrong — please call or text 530-557-7879';
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
