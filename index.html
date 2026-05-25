@@ -204,6 +204,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(-
 
 h1{font-family:var(--display);font-size:clamp(3rem,5.5vw,6.2rem);font-weight:800;line-height:.96;letter-spacing:-.03em;margin-bottom:2rem;color:var(--text)}
 h1 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
+h1 .ember{color:#e8622a}
 .hero-body{font-size:18px;line-height:1.85;color:var(--text-2);max-width:48ch;margin-bottom:3rem}
 .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:13px 22px;border:1px solid var(--text);background:var(--text);color:var(--bg);cursor:pointer;transition:opacity .2s}
@@ -249,6 +250,7 @@ h1 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 [data-theme="dark"] .ticker-dot{background:#c94d1a}
 h2{font-family:var(--display);font-size:clamp(2rem,3.5vw,3.6rem);font-weight:800;line-height:1.0;letter-spacing:-.03em;margin-bottom:1.5rem;color:var(--text)}
 h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
+h2 .ember{color:#e8622a}
 .section-tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}
 .section-tag::before{content:'';display:block;width:18px;height:1px;background:var(--text-3)}
 .problem{background:var(--bg-off);border-top:1px solid var(--rule)}
@@ -311,6 +313,7 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .about h2{color:#fff}
 [data-theme="dark"] .about h2{color:#0a0a0a}
 .about h2 .outline{-webkit-text-stroke:2px #fff;color:transparent}
+.about h2 .ember{color:#e8622a}
 [data-theme="dark"] .about h2 .outline{-webkit-text-stroke:2px #0a0a0a}
 .about .section-tag{color:rgba(255,255,255,.3)}
 [data-theme="dark"] .about .section-tag{color:rgba(0,0,0,.4)}
@@ -318,8 +321,26 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 [data-theme="dark"] .about .section-tag::before{background:rgba(0,0,0,.2)}
 .about-card{border:1px solid rgba(255,255,255,.1);padding:2.5rem;margin-bottom:2rem}
 [data-theme="dark"] .about-card{border-color:rgba(0,0,0,.15)}
+
+.testimonial-block{border-left:2px solid var(--volt);padding-left:1.2rem;margin:2rem 0}
+.testimonial-quote{font-size:15px;line-height:1.85;color:rgba(255,255,255,.65);font-style:italic;margin-bottom:.8rem}
+[data-theme="dark"] .testimonial-quote{color:rgba(0,0,0,.6)}
+.testimonial-attr{display:flex;flex-direction:column;gap:2px}
+.testimonial-name{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+[data-theme="dark"] .testimonial-name{color:rgba(0,0,0,.5)}
+.testimonial-biz{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.28)}
+[data-theme="dark"] .testimonial-biz{color:rgba(0,0,0,.3)}
 .about-quote{font-family:var(--display);font-size:1.15rem;font-weight:700;line-height:1.45;letter-spacing:-.02em;color:#fff;margin-bottom:1rem}
-[data-theme="dark"] .about-quote{color:#0a0a0a}
+[data-theme="dark"] 
+.testimonial-block{border-left:2px solid var(--volt);padding-left:1.2rem;margin:2rem 0}
+.testimonial-quote{font-size:15px;line-height:1.85;color:rgba(255,255,255,.65);font-style:italic;margin-bottom:.8rem}
+[data-theme="dark"] .testimonial-quote{color:rgba(0,0,0,.6)}
+.testimonial-attr{display:flex;flex-direction:column;gap:2px}
+.testimonial-name{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+[data-theme="dark"] .testimonial-name{color:rgba(0,0,0,.5)}
+.testimonial-biz{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.28)}
+[data-theme="dark"] .testimonial-biz{color:rgba(0,0,0,.3)}
+.about-quote{color:#0a0a0a}
 .about-quote-attr{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25)}
 [data-theme="dark"] .about-quote-attr{color:rgba(0,0,0,.35)}
 .about-credentials{display:flex;flex-direction:column}
@@ -371,11 +392,11 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .form-success{display:none;font-size:15px;line-height:1.8;color:var(--text-2);padding:2rem;border:1px solid var(--rule);background:var(--bg)}
 .form-success a{color:var(--text)}
 footer{background:var(--bg-inv);border-top:1px solid rgba(255,255,255,.06)}
-footer>.inner{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
+footer>.inner{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;text-align:left}
 .footer-logo{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 [data-theme="dark"] .footer-logo{color:rgba(0,0,0,.5)}
 .footer-copy{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.06em}
-.footer-stack{display:flex;gap:1.5rem;align-items:center}
+.footer-stack{display:flex;gap:1.5rem;align-items:center;text-align:left}
 [data-theme="dark"] .footer-stack{color:rgba(0,0,0,.3)}
 [data-theme="dark"] .footer-copy{color:rgba(0,0,0,.3)}
 .footer-copy a{color:inherit;text-decoration:none}
@@ -443,7 +464,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .hero-inner{grid-template-columns:1fr}
   .ticker-bar{padding:11px 1.5rem}
   .problem>.inner,.services>.inner,.work>.inner,.about>.inner,.faq>.inner,.contact>.inner{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem}
-  footer>.inner{padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.3rem}
+  footer>.inner{padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.3rem;text-align:left}
   .footer-logo{margin-bottom:.4rem}
   .footer-stack{flex-direction:column;gap:.2rem}
   .footer-copy{font-size:10px;line-height:1.5}
@@ -460,6 +481,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   h2{font-size:2rem}
   h1 .outline, h2 .outline{-webkit-text-stroke:0 !important;color:inherit !important}
   .about h2 .outline{color:#ffffff !important}
+  h1 .ember, h2 .ember{color:#e8622a !important}
 }
 </style>
 </head>
@@ -506,8 +528,8 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   <div class="hero-left">
     <div class="hero-left-top">
       <div class="eyebrow">Commercial Spatial Strategy &amp; Design &middot; NorCal</div>
-      <h1>Spaces that<br>work as hard<br>as <span class="outline">you do.</span></h1>
-      <p class="hero-body">Most commercial interiors are designed to look good in photos. We design them to perform: guiding customers, supporting teams, and expressing your brand without you having to explain it.</p>
+      <h1>Spaces that<br>work as hard<br>as <span class="ember">you do.</span></h1>
+      <p class="hero-body">Most commercial interiors are designed to look good in photos. We design them to perform. Spaces that guide customers, support your team, and express your brand without you having to explain it.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn">Start a project &rarr;</a>
         <a href="#work" class="btn btn-ghost">See our work</a>
@@ -563,7 +585,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 <div class="inner">
   <div>
     <div class="section-tag">The Problem</div>
-    <h2>Pretty does not<br>pay the <span class="outline">rent.</span></h2>
+    <h2>Pretty does not<br>pay the rent.</h2>
     <div class="problem-body">
       <p>Most small business owners handle the floor plan themselves or leave it to the contractor. That is not a criticism. It is just what happens when there is no obvious alternative. The contractor knows how to build. You know your business. Nobody in that equation is thinking about customer flow, conversion points, or how the space will perform six months after opening.</p>
       <p>By the time the problems show up, the decisions are locked in. Fixing a floor plan after build-out costs five to ten times more than getting it right before. A spatial design consultant is not a luxury. It is the cheapest insurance you can buy on a commercial build.</p>
@@ -573,7 +595,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
     <div class="problem-point"><div class="problem-num">01</div><div><div class="problem-title">Poor customer flow costs you revenue</div><div class="problem-text">Confused customers leave. Friction at the wrong moment kills conversions. Spatial logic is a direct business lever most owners never touch.</div></div></div>
     <div class="problem-point"><div class="problem-num">02</div><div><div class="problem-title">Generic spaces do not build brands</div><div class="problem-text">When your space looks like everyone else's, you are competing on price. A distinctive environment gives customers something to remember and talk about.</div></div></div>
     <div class="problem-point"><div class="problem-num">03</div><div><div class="problem-title">Expensive mistakes happen early</div><div class="problem-text">A floor plan committed to at signing is almost impossible to fix later. Getting spatial strategy right before build-out is far cheaper than correcting it after.</div></div></div>
-    <div class="problem-point"><div class="problem-num">04</div><div><div class="problem-title">Most designers do not think like business owners</div><div class="problem-text">Beautiful portfolios, no ROI conversation. Blackrowe Spatial starts with your business model and works backwards to the space.</div></div></div>
+    <div class="problem-point"><div class="problem-num">04</div><div><div class="problem-title">You end up paying for the redesign twice</div><div class="problem-text">When the layout is wrong, you find out after opening. Fixing it means closing, rebuilding, and losing revenue while you do. The first design was not cheaper. It was deferred cost.</div></div></div>
   </div>
 </div>
 </section>
@@ -583,7 +605,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   <div class="services-header">
     <div>
       <div class="section-tag">Services</div>
-      <h2>What we<br><span class="outline">do.</span></h2>
+      <h2>What we<br>do.</h2>
     </div>
     <p class="services-intro">Three focused services covering commercial space planning, layout optimization, and brand environment integration. Most clients start with Spatial Strategy and add from there. All projects begin with a free consultation. No pitch, no pressure.</p>
   </div>
@@ -631,9 +653,9 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   <div class="work-header">
     <div>
       <div class="section-tag">Worked Scenarios</div>
-      <h2>How we<br><span class="outline">think.</span></h2>
+      <h2>How we<br>think.</h2>
     </div>
-    <p class="work-note">These are worked scenarios: real business types, real constraints, real decisions. They show how Blackrowe Spatial thinks through a project before touching a single finish selection.</p>
+    <p class="work-note">These are worked scenarios: real business types, real constraints, real decisions. They show how Blackrowe Spatial thinks through a project before recommending a single material or piece of furniture.</p>
   </div>
   <div class="scenarios">
     <div class="scenario">
@@ -706,12 +728,18 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   </div>
   <div>
     <div class="section-tag">About</div>
-    <h2>I think like a<br><span class="outline">business owner.</span></h2>
+    <h2>I think like a<br><span class="ember">business owner.</span></h2>
     <div class="about-body">
       <p>I'm Josh Pelham. I think about space the way an operator does: what needs to happen here, in what order, for which people, and what gets in the way of that. That is a different question than what most designers ask.</p>
       <p>I have worked through every phase of a spatial project from concept through execution, not just the consulting layer. That end-to-end experience changes how you think about a space. You understand the cost of a bad early decision because you have had to live with one.</p>
-      <p>I am not selling you a look. I am helping you build an environment that serves your customers better, supports your team, and represents your brand without you having to explain it.</p>
       <p>Most projects begin with a free consultation. No pitch, just a conversation about your space and what you are trying to accomplish.</p>
+    </div>
+    <div class="testimonial-block">
+      <p class="testimonial-quote">"What set them apart was how organized and thoughtful the whole process was. They listened closely, translated what we needed into a design that felt completely like us, and delivered something that honestly exceeded what we had imagined when we started."</p>
+      <div class="testimonial-attr">
+        <span class="testimonial-name">Client name</span>
+        <span class="testimonial-biz">Business type, City</span>
+      </div>
     </div>
     <div class="about-sig">Josh Pelham</div>
     <div class="about-location">Nevada City, California</div>
@@ -724,7 +752,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   <div class="faq-header">
     <div>
       <div class="section-tag">FAQ</div>
-      <h2>Common<br><span class="outline">questions.</span></h2>
+      <h2>Common<br>questions.</h2>
     </div>
     <p class="faq-intro">Everything you need to know before starting a conversation. If something is not covered here, call or text 530-557-7879.</p>
   </div>
@@ -733,7 +761,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
     <div class="faq-item"><div class="faq-q">Where are you located and what areas do you serve?</div><div class="faq-a">Based in Nevada City, California, in the Sierra Nevada foothills. We primarily serve clients in Sacramento, Reno, and the Lake Tahoe region, and are available for remote projects anywhere in the US.</div></div>
     <div class="faq-item"><div class="faq-q">How is this different from hiring an interior designer?</div><div class="faq-a">Most interior designers lead with aesthetics. Blackrowe Spatial leads with function: how the space needs to work for your specific business. Customer flow, zoning, conversion points, and operational logic come first. The aesthetic follows from that foundation.</div></div>
     <div class="faq-item"><div class="faq-q">What does it cost?</div><div class="faq-a">Spatial Strategy starts from $1,500. Concept and Direction starts from $2,500. Implementation Support is billed at $150/hr and can be added to any project. Final scope and pricing are confirmed after the free consultation, once we understand what your project actually needs.</div></div>
-    <div class="faq-item"><div class="faq-q">What is the first step?</div><div class="faq-a">A free consultation. No pitch, no commitment, just a conversation about your space, what you are planning, and what you are trying to accomplish. Call or text 530-557-7879 or use the contact form below.</div></div>
+    <div class="faq-item"><div class="faq-q">How long does a project take?</div><div class="faq-a">Spatial Strategy typically takes one to two weeks from first conversation to deliverable. Concept and Direction adds another one to three weeks depending on scope and revision rounds. Implementation Support runs concurrently with your build and is billed by the hour as needed.</div></div>
     <div class="faq-item"><div class="faq-q">Do you work remotely?</div><div class="faq-a">Yes. Spatial Strategy and Concept and Direction can both be delivered remotely with strong results. Implementation Support requires on-site presence, which we offer within the Sacramento, Reno, and Tahoe region.</div></div>
   </div>
 </div>
@@ -744,7 +772,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   <div>
     <div class="section-tag">Contact</div>
     <h2>Start with a<br>conversation.</h2>
-    <p class="contact-body">The first step is free and zero-pressure. Tell me about your space, what you are planning, what is not working, or what you are trying to accomplish, and we will figure out together whether and how I can help.</p>
+    <p class="contact-body">The first step is free. No pitch, no commitment -- just a conversation.</p>
     <div class="contact-details">
       <div class="contact-row"><span class="contact-row-label">Call or text</span><a href="tel:5305577879">530-557-7879</a></div>
       <div class="contact-row"><span class="contact-row-label">Address</span><span>313 Commercial St<br>Nevada City, CA 95959</span></div>
