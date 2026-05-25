@@ -396,11 +396,11 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   overflow-y:auto;
 }
 .mobile-menu.open{transform:translateX(0)}
-.mobile-menu-inner{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:3rem 2rem 3rem}
+.mobile-menu-inner{display:flex;flex-direction:column;justify-content:space-between;min-height:100%;padding:2.5rem 1.5rem 3rem}
 .mobile-nav{display:flex;flex-direction:column}
 .mobile-nav-link{
   font-family:var(--display);font-weight:800;
-  font-size:clamp(2rem,8vw,3rem);
+  font-size:clamp(1.8rem,7vw,2.6rem);
   line-height:1.1;letter-spacing:-.03em;
   color:var(--text);text-decoration:none;
   padding:.4rem 0;
@@ -411,7 +411,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 .mobile-nav-link:hover{color:var(--text-3)}
 .mobile-nav-cta{color:var(--volt) !important;margin-top:1.5rem;border:none !important}
 [data-theme="dark"] .mobile-nav-cta{color:#c94d1a !important}
-.mobile-menu-footer{padding-top:2rem;border-top:1px solid var(--rule)}
+.mobile-menu-footer{padding-top:1.5rem;border-top:1px solid var(--rule);margin-top:auto}
 .mobile-menu-phone{font-family:var(--mono);font-size:15px;color:var(--text);text-decoration:none;display:block;margin-bottom:.4rem;font-weight:500}
 .mobile-menu-loc{font-family:var(--mono);font-size:11px;color:var(--text-3);letter-spacing:.08em}
 
@@ -448,7 +448,9 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .svc-addon{flex-direction:column;gap:1.5rem}
   .scenario{grid-template-columns:1fr;gap:1rem}
   .form-row{grid-template-columns:1fr}
-  footer{flex-direction:column;gap:.5rem;text-align:center}
+  footer>.inner{flex-direction:column;gap:.4rem;align-items:flex-start}
+  .footer-logo{width:100%}
+  .footer-copy{font-size:10px}
   h1{font-size:3rem}
   h2{font-size:2rem}
 }
@@ -700,7 +702,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
     <h2>I think like a<br><span class="outline">business owner.</span></h2>
     <div class="about-body">
       <p>I'm Josh Pelham. I think about space the way an operator does: what needs to happen here, in what order, for which people, and what gets in the way of that. That is a different question than what most designers ask.</p>
-      <p>I have worked through every phase of a spatial project from concept through execution. Not as a bystander. I have modeled spaces in SketchUp, made structural decisions, and lived with the results. That kind of end-to-end experience changes how you consult -- you understand the cost of a bad early decision because you have had to correct one.</p>
+      <p>I have worked through every phase of a spatial project from concept through execution, not just the consulting layer. That end-to-end experience changes how you think about a space. You understand the cost of a bad early decision because you have had to live with one.</p>
       <p>I am not selling you a look. I am helping you build an environment that serves your customers better, supports your team, and represents your brand without you having to explain it.</p>
       <p>Most projects begin with a free consultation. No pitch, just a conversation about your space and what you are trying to accomplish.</p>
     </div>
@@ -739,7 +741,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
     <div class="contact-details">
       <div class="contact-row"><span class="contact-row-label">Call or text</span><a href="tel:5305577879">530-557-7879</a></div>
       <div class="contact-row"><span class="contact-row-label">Address</span><span>313 Commercial St<br>Nevada City, CA 95959</span></div>
-      <div class="contact-row"><span class="contact-row-label">Hours</span><span>Mon&ndash;Fri 9am&ndash;6pm<br>Sat&ndash;Sun 10am&ndash;4pm</span></div>
+      <div class="contact-row"><span class="contact-row-label">Hours</span><span>Mon&ndash;Fri 9am&ndash;6pm<br>Sat&ndash;Sun 10am&ndash;4pm<br><span style="font-size:13px;color:var(--text-3);font-family:var(--mono);letter-spacing:.06em">By appointment</span></span></div>
       <div class="contact-row"><span class="contact-row-label">Based in</span><span>Nevada City, CA</span></div>
       <div class="contact-row"><span class="contact-row-label">Serving</span><span>Nevada City &middot; Grass Valley &middot; Sacramento &middot; Auburn &middot; Roseville &middot; Truckee &middot; Reno &middot; Tahoe &middot; Remote</span></div>
     </div>
@@ -765,11 +767,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
           </select>
         </div>
       </div>
-      <div class="form-field">
-        <label for="goal">Primary operational goal</label>
-        <input type="text" id="goal" name="goal" placeholder="e.g. improve customer flow, prepare for build-out, rebrand the space">
-      </div>
-      <div class="form-field"><label for="message">Tell me about your space</label><textarea id="message" name="message" placeholder="What are you working with, and what is the challenge or goal?"></textarea></div>
+      <div class="form-field"><label for="message">Tell me about your space</label><textarea id="message" name="message" placeholder="What are you working with, what is the challenge, and what are you trying to accomplish?"></textarea></div>
       <button type="submit" class="form-submit" id="submit-btn">Send message &rarr;</button>
     </form>
     <div class="form-success" id="form-success">
