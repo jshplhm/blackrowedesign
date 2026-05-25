@@ -181,7 +181,7 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;font-weight:400;line-height:1.75;overflow-x:hidden;transition:background .3s,color .3s}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:0 2.5rem;height:58px;background:var(--bg);border-bottom:1px solid var(--rule);transition:background .3s,border-color .3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--bg);border-bottom:1px solid var(--rule);transition:background .3s,border-color .3s;padding:0 2.5rem}
 .nav-logo{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--text);text-decoration:none;text-transform:uppercase;display:flex;align-items:center;gap:8px}
 .nav-logo-dot{width:7px;height:7px;background:var(--volt);border-radius:50%;flex-shrink:0}
 .nav-right{display:flex;align-items:center}
@@ -193,7 +193,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .theme-toggle{width:58px;height:58px;border:none;border-left:1px solid var(--rule);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-3);transition:color .2s,background .2s;flex-shrink:0}
 .theme-toggle:hover{color:var(--text);background:var(--bg-off)}
 .theme-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hero{min-height:100vh;padding-top:58px;display:grid;grid-template-columns:1fr 400px}
+.hero{min-height:100vh;padding-top:58px}
+.hero-inner{display:grid;grid-template-columns:1fr 400px;min-height:calc(100vh - 58px);max-width:1320px;margin:0 auto}
 .hero-left{padding:6rem 4rem 5rem;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--rule)}
 .hero-left-top{flex:1;display:flex;flex-direction:column;justify-content:center}
 .eyebrow{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:2.5rem}
@@ -243,7 +244,8 @@ h2{font-family:var(--display);font-size:clamp(2rem,3.5vw,3.6rem);font-weight:800
 h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .section-tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}
 .section-tag::before{content:'';display:block;width:18px;height:1px;background:var(--text-3)}
-.problem{background:var(--bg-off);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;border-top:1px solid var(--rule)}
+.problem{background:var(--bg-off);border-top:1px solid var(--rule)}
+.problem>.inner{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start}
 .problem-body{font-size:16px;line-height:1.85;color:var(--text-2)}
 .problem-body p+p{margin-top:1.2rem}
 .problem-points{display:flex;flex-direction:column}
@@ -252,7 +254,8 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .problem-num{font-family:var(--mono);font-size:10px;color:var(--text-3);padding-top:3px;letter-spacing:.06em}
 .problem-title{font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:5px;color:var(--text)}
 .problem-text{font-size:15px;line-height:1.75;color:var(--text-2)}
-.services{padding:7rem 4rem;border-top:1px solid var(--rule)}
+.services{border-top:1px solid var(--rule)}
+.services>.inner{padding:7rem 4rem}
 .services-header{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:end;margin-bottom:4rem}
 .services-intro{font-size:16px;line-height:1.85;color:var(--text-2)}
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)}
@@ -281,7 +284,8 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .svc-addon .svc-name{font-size:1.1rem;margin-bottom:.2rem;color:#0a0a0a}
 .svc-addon .svc-price{color:rgba(10,10,10,.55);font-size:13px;margin-bottom:.8rem}
 .svc-addon .svc-desc{margin-bottom:0;font-size:15px;color:rgba(10,10,10,.6);max-width:58ch}
-.work{padding:7rem 4rem;border-top:1px solid var(--rule);background:var(--bg-off)}
+.work{border-top:1px solid var(--rule);background:var(--bg-off)}
+.work>.inner{padding:7rem 4rem}
 .work-header{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:end;margin-bottom:4rem}
 .work-note{font-size:16px;line-height:1.85;color:var(--text-2)}
 .scenarios{border-top:1px solid var(--rule)}
@@ -295,7 +299,8 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .challenge{display:flex;gap:12px;font-size:15px;color:var(--text-2);line-height:1.65;padding:.7rem 0;border-bottom:1px solid var(--rule);align-items:flex-start}
 .challenge:first-child{border-top:1px solid var(--rule)}
 .challenge-arrow{font-family:var(--mono);font-size:10px;color:var(--text-3);margin-top:4px;flex-shrink:0}
-.about{background:var(--bg-inv);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:start}
+.about{background:var(--bg-inv)}
+.about>.inner{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:start}
 .about h2{color:#fff}
 [data-theme="dark"] .about h2{color:#0a0a0a}
 .about h2 .outline{-webkit-text-stroke:2px #fff;color:transparent}
@@ -327,7 +332,8 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 [data-theme="dark"] .about-sig{color:#0a0a0a}
 .about-location{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-top:4px}
 [data-theme="dark"] .about-location{color:rgba(0,0,0,.35)}
-.faq{padding:7rem 4rem;border-top:1px solid var(--rule)}
+.faq{border-top:1px solid var(--rule)}
+.faq>.inner{padding:7rem 4rem}
 .faq-header{display:grid;grid-template-columns:1fr 1fr;gap:6rem;margin-bottom:4rem;align-items:end}
 .faq-intro{font-size:16px;line-height:1.85;color:var(--text-2)}
 .faq-list{display:flex;flex-direction:column}
@@ -335,7 +341,8 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .faq-item:last-child{border-bottom:1px solid var(--rule)}
 .faq-q{font-family:var(--display);font-size:1.05rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.6rem;color:var(--text)}
 .faq-a{font-size:15px;line-height:1.85;color:var(--text-2);max-width:70ch}
-.contact{background:var(--bg-off);padding:7rem 4rem;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start}
+.contact{background:var(--bg-off);border-top:1px solid var(--rule)}
+.contact>.inner{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start}
 .contact h2{margin-bottom:1.5rem}
 .contact-body{font-size:16px;line-height:1.85;color:var(--text-2);margin-bottom:2.5rem}
 .contact-details{display:flex;flex-direction:column}
@@ -356,13 +363,16 @@ h2 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 .form-submit:disabled{opacity:.4;cursor:default}
 .form-success{display:none;font-size:15px;line-height:1.8;color:var(--text-2);padding:2rem;border:1px solid var(--rule);background:var(--bg)}
 .form-success a{color:var(--text)}
-footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06)}
+footer{background:var(--bg-inv);border-top:1px solid rgba(255,255,255,.06)}
+footer>.inner{padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
 .footer-logo{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 [data-theme="dark"] .footer-logo{color:rgba(0,0,0,.5)}
 .footer-copy{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.06em}
 [data-theme="dark"] .footer-copy{color:rgba(0,0,0,.3)}
 .footer-copy a{color:inherit;text-decoration:none}
 /* HAMBURGER */
+.inner{max-width:1320px;margin:0 auto;width:100%}
+nav>.inner{display:flex;justify-content:space-between;align-items:center;width:100%}
 .hamburger{display:none;width:44px;height:58px;border:none;border-left:1px solid var(--rule);background:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;flex-shrink:0}
 .hamburger span{display:block;width:18px;height:1.5px;background:var(--text);transition:transform .25s ease,opacity .25s ease}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
@@ -413,6 +423,7 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
 .about-inline-attr{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25)}
 [data-theme="dark"] .about-inline-attr{color:rgba(0,0,0,.35)}
 .pricing-note{margin-top:1px}
+.pricing-note>.inner,.services>.inner .pricing-note{max-width:none}
 .pricing-note-inner{background:var(--bg-off);border:1px solid var(--rule);padding:2.5rem 3rem;display:grid;grid-template-columns:1fr 2fr auto;gap:3rem;align-items:start}
 .pricing-note-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);padding-top:4px}
 .pricing-note-body p{font-size:15px;line-height:1.85;color:var(--text-2)}
@@ -421,13 +432,16 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
 .pricing-note-cta:hover{opacity:.6}
 @media(max-width:900px){
   nav{padding:0 1.25rem}
+  nav>.inner{padding:0}
   .nav-links{display:none}
   .hamburger{display:flex}
   .hero{grid-template-columns:1fr}
   .hero-right{display:none}
   .hero-left{padding:3.5rem 1.5rem 3rem;border-right:none}
+  .hero-inner{grid-template-columns:1fr}
   .ticker-bar{padding:11px 1.5rem}
-  .problem,.services,.work,.about,.faq,.contact{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem}
+  .problem>.inner,.services>.inner,.work>.inner,.about>.inner,.faq>.inner,.contact>.inner{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem}
+  footer>.inner{padding:1.5rem}
   .services-header,.work-header,.faq-header{grid-template-columns:1fr;gap:1.5rem}
   .services-grid{grid-template-columns:1fr}
   .pricing-note-inner{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
@@ -444,6 +458,7 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
 <body>
 
 <nav id="nav">
+<div class="inner">
   <a href="#" class="nav-logo"><span class="nav-logo-dot"></span>Blackrowe</a>
   <div class="nav-right">
     <ul class="nav-links">
@@ -459,6 +474,7 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
       <span></span><span></span><span></span>
     </button>
   </div>
+</div>
 </nav>
 
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
@@ -478,6 +494,7 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
 </div>
 
 <section class="hero">
+<div class="inner hero-inner">
   <div class="hero-left">
     <div class="hero-left-top">
       <div class="eyebrow"><div class="eyebrow-dot"></div>Commercial Spatial Design &middot; NorCal</div>
@@ -514,6 +531,7 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
       </div>
     </div>
   </div>
+</div>
 </section>
 
 <div class="ticker-bar" aria-hidden="true">
@@ -534,6 +552,7 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
 </div>
 
 <section class="problem reveal" id="problem">
+<div class="inner">
   <div>
     <div class="section-tag">The Problem</div>
     <h2>Pretty does not<br>pay the <span class="outline">rent.</span></h2>
@@ -548,9 +567,11 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
     <div class="problem-point"><div class="problem-num">03</div><div><div class="problem-title">Expensive mistakes happen early</div><div class="problem-text">A floor plan committed to at signing is almost impossible to fix later. Getting spatial strategy right before build-out is far cheaper than correcting it after.</div></div></div>
     <div class="problem-point"><div class="problem-num">04</div><div><div class="problem-title">Most designers do not think like business owners</div><div class="problem-text">Beautiful portfolios, no ROI conversation. Blackrowe Spatial starts with your business model and works backwards to the space.</div></div></div>
   </div>
+</div>
 </section>
 
 <section class="services reveal" id="services">
+<div class="inner">
   <div class="services-header">
     <div>
       <div class="section-tag">Services</div>
@@ -594,9 +615,11 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
       <a href="#contact" class="pricing-note-cta">Book a free consultation &rarr;</a>
     </div>
   </div>
+</div>
 </section>
 
 <section class="work reveal" id="work">
+<div class="inner">
   <div class="work-header">
     <div>
       <div class="section-tag">Worked Scenarios</div>
@@ -772,9 +795,11 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
       </div>
     </div>
   </div>
+</div>
 </section>
 
 <section class="about reveal" id="about">
+<div class="inner">
   <div>
     <div class="about-card">
       <p class="about-quote">"No amount of pretty can fix a space that does not work. Get the spatial logic right first. Everything else follows."</p>
@@ -799,9 +824,11 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
     <div class="about-sig">Josh Pelham</div>
     <div class="about-location">Nevada City, California</div>
   </div>
+</div>
 </section>
 
 <section class="faq reveal" id="faq">
+<div class="inner">
   <div class="faq-header">
     <div>
       <div class="section-tag">FAQ</div>
@@ -817,9 +844,11 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
     <div class="faq-item"><div class="faq-q">What is the first step?</div><div class="faq-a">A free consultation. No pitch, no commitment, just a conversation about your space, what you are planning, and what you are trying to accomplish. Call or text 530-557-7879 or use the contact form below.</div></div>
     <div class="faq-item"><div class="faq-q">Do you work remotely?</div><div class="faq-a">Yes. Spatial Strategy and Concept and Direction can both be delivered remotely with strong results. Implementation Support requires on-site presence, which we offer within the Sacramento, Reno, and Tahoe region.</div></div>
   </div>
+</div>
 </section>
 
 <section class="contact reveal" id="contact">
+<div class="inner">
   <div>
     <div class="section-tag">Contact</div>
     <h2>Start with a<br>conversation.</h2>
@@ -864,11 +893,14 @@ footer{background:var(--bg-inv);padding:2rem 2.5rem;display:flex;justify-content
       Message received. I will be in touch within one business day. You can also reach me directly at <a href="tel:5305577879">530-557-7879</a>.
     </div>
   </div>
+</div>
 </section>
 
 <footer>
+<div class="inner">
   <span class="footer-logo">Blackrowe Spatial</span>
   <span class="footer-copy">&copy; 2026 Blackrowe Spatial &middot; 313 Commercial St, Nevada City, CA 95959 &middot; <a href="tel:5305577879">530-557-7879</a></span>
+</div>
 </footer>
 
 <script>
