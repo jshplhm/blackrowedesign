@@ -3,380 +3,569 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blackrowe Design — Commercial Spatial Design</title>
-<meta name="description" content="Blackrowe Design helps businesses turn commercial spaces into environments that guide customers, support teams, and reflect the brand. Serving Sacramento, Reno, and Lake Tahoe.">
+<title>Blackrowe Design — Commercial Spatial Design · Sacramento · Reno · Tahoe</title>
+<meta name="description" content="Blackrowe Design is a commercial spatial design consultancy based in Nevada City, California. We help businesses in Sacramento, Reno, and Lake Tahoe build spaces that work — for customers, teams, and the bottom line.">
+<meta name="keywords" content="commercial interior design, spatial design, Sacramento interior designer, Reno interior design, Tahoe commercial design, retail design, restaurant design, office design, Nevada City">
+<meta name="author" content="Josh Pelham, Blackrowe Design">
+<meta property="og:title" content="Blackrowe Design — Commercial Spatial Design">
+<meta property="og:description" content="We design commercial spaces that work for your customers, your team, and your bottom line. Serving Sacramento, Reno, and Lake Tahoe.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.blackrowe.com">
+<link rel="canonical" href="https://www.blackrowe.com">
+
+<!-- Structured Data: LocalBusiness (for Google + AI tools) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Blackrowe Design",
+  "description": "Commercial spatial design consultancy helping businesses in Sacramento, Reno, and Lake Tahoe build spaces that guide customers, support teams, and reflect their brand.",
+  "url": "https://www.blackrowe.com",
+  "telephone": "+15305577879",
+  "email": "jshplhm@gmail.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Josh Pelham"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nevada City",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Sacramento"},
+    {"@type": "City", "name": "Reno"},
+    {"@type": "City", "name": "Lake Tahoe"},
+    {"@type": "City", "name": "Nevada City"}
+  ],
+  "serviceType": [
+    "Commercial Spatial Design",
+    "Retail Interior Design",
+    "Restaurant Design",
+    "Office Design",
+    "Wellness Studio Design",
+    "Spatial Strategy Consulting"
+  ],
+  "priceRange": "$$",
+  "knowsAbout": [
+    "commercial interior design",
+    "spatial strategy",
+    "customer flow optimization",
+    "brand environment design",
+    "floor plan consulting"
+  ]
+}
+</script>
+
+<!-- FAQ Schema (feeds AI answer boxes) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Blackrowe Design do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blackrowe Design is a commercial spatial design consultancy that helps businesses design spaces that work — for their customers, their team, and their bottom line. Services include spatial strategy, concept and finish direction, and implementation support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Blackrowe Design located and what areas do they serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blackrowe Design is based in Nevada City, California and serves clients in Sacramento, Reno, Lake Tahoe, and remotely across the United States."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of commercial spaces does Blackrowe Design work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blackrowe Design works with retail stores, restaurants and cafés, wellness studios, professional offices, and other commercial spaces. Projects range from spatial strategy consulting to full concept and implementation support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started with Blackrowe Design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first step is a free consultation — no pitch, just a conversation about your space and what you're trying to accomplish. Contact Josh Pelham at 530-557-7879 or use the contact form at blackrowe.com."
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --black: #0e0e0d;
-  --off-white: #f5f2ed;
-  --accent: #8b6f47;
-  --accent-light: #d4b896;
-  --rule: rgba(14,14,13,0.11);
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'DM Sans', system-ui, sans-serif;
+  --ink: #080808;
+  --white: #ffffff;
+  --off: #f7f7f5;
+  --mid: #e8e8e4;
+  --muted: #8a8a85;
+  --volt: #c8ff00;
+  --volt-dim: rgba(200,255,0,0.12);
+  --rule: rgba(8,8,8,0.1);
+  --rule-light: rgba(255,255,255,0.1);
+  --display: 'Syne', sans-serif;
+  --body: 'Instrument Sans', sans-serif;
+  --mono: 'DM Mono', monospace;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--off-white);
-  color: var(--black);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.7;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
   overflow-x: hidden;
 }
+
+/* ── UTILITY ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
 
 /* ── NAV ── */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 100;
+  z-index: 200;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 4rem;
-  background: var(--off-white);
+  padding: 0 2.5rem;
+  height: 58px;
+  background: var(--white);
   border-bottom: 1px solid var(--rule);
+  transition: border-color 0.3s;
 }
 
-nav.scrolled { box-shadow: 0 2px 24px rgba(14,14,13,0.06); }
+nav.scrolled { border-color: var(--mid); }
 
 .nav-logo {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: 1.1rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--black);
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--ink);
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-logo span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--volt);
+  border-radius: 50%;
+  margin-left: 6px;
+  vertical-align: 2px;
 }
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 0;
   list-style: none;
   align-items: center;
 }
 
 .nav-links a {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--muted);
   text-decoration: none;
-  opacity: 0.45;
-  transition: opacity 0.2s;
+  padding: 0 1.2rem;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--rule);
+  transition: color 0.2s, background 0.2s;
 }
 
-.nav-links a:hover { opacity: 1; }
+.nav-links a:hover { color: var(--ink); background: var(--off); }
 
 .nav-cta {
-  opacity: 1 !important;
-  background: var(--black);
-  color: var(--off-white) !important;
-  padding: 0.6rem 1.3rem;
-  transition: background 0.2s !important;
+  color: var(--white) !important;
+  background: var(--ink) !important;
+  border-left: none !important;
 }
 
-.nav-cta:hover { background: var(--accent) !important; }
+.nav-cta:hover { background: #2a2a2a !important; }
 
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
+  padding-top: 58px;
   display: grid;
-  grid-template-columns: 55% 45%;
-  padding-top: 4.5rem;
+  grid-template-columns: 1fr 420px;
 }
 
 .hero-left {
+  padding: 6rem 4rem 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 7rem 5rem 7rem 4rem;
+  justify-content: space-between;
   border-right: 1px solid var(--rule);
 }
 
+.hero-left-top { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
 .eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
 }
 
-.eyebrow::before {
-  content: '';
-  display: block;
-  width: 2rem;
-  height: 1px;
-  background: var(--accent);
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--volt);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 h1 {
-  font-family: var(--serif);
-  font-size: clamp(2.8rem, 4.5vw, 5.4rem);
-  font-weight: 300;
-  line-height: 1.07;
+  font-family: var(--display);
+  font-size: clamp(3rem, 5.5vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
   margin-bottom: 2.5rem;
-  letter-spacing: -0.01em;
 }
 
-h1 em, h2 em { font-style: italic; color: var(--accent); }
+h1 .outline {
+  -webkit-text-stroke: 2px var(--ink);
+  color: transparent;
+}
 
 .hero-body {
-  font-size: 1rem;
-  line-height: 1.88;
-  color: rgba(14,14,13,0.58);
-  max-width: 44ch;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 46ch;
   margin-bottom: 3rem;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  background: var(--black);
-  color: var(--off-white);
-  padding: 0.9rem 1.8rem;
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background 0.2s, gap 0.3s;
-  white-space: nowrap;
+  padding: 13px 22px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 
-.btn:hover { background: var(--accent); gap: 1.1rem; }
+.btn:hover { background: #2a2a2a; }
 
 .btn-ghost {
   background: transparent;
-  color: var(--black);
-  border: 1px solid rgba(14,14,13,0.25);
-  transition: border-color 0.2s, gap 0.3s;
+  color: var(--ink);
 }
 
-.btn-ghost:hover { background: transparent; border-color: var(--black); }
+.btn-ghost:hover { background: var(--off); }
 
-/* ── HERO RIGHT — typographic panel ── */
+.btn-volt {
+  background: var(--volt);
+  color: var(--ink);
+  border-color: var(--volt);
+}
+
+.btn-volt:hover { background: #b8ef00; border-color: #b8ef00; }
+
+.hero-meta {
+  display: flex;
+  gap: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--rule);
+}
+
+.meta-item { }
+
+.meta-val {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.meta-label {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ── HERO RIGHT ── */
 .hero-right {
-  background: var(--black);
+  background: var(--ink);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem 2.5rem;
   position: relative;
   overflow: hidden;
 }
 
-/* Large background word — purely decorative */
-.hero-bg-word {
+.hero-right-bg-text {
   position: absolute;
-  bottom: -0.15em;
+  bottom: -0.1em;
   right: -0.05em;
-  font-family: var(--serif);
-  font-size: clamp(9rem, 18vw, 22rem);
-  font-weight: 300;
-  color: rgba(245,242,237,0.04);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 180px;
+  color: rgba(255,255,255,0.03);
   line-height: 1;
   pointer-events: none;
   user-select: none;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
-.hero-right-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 4rem 3.5rem;
-  justify-content: space-between;
-}
+.hero-right-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
 
-.hero-manifesto {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2.5rem;
-}
-
-.manifesto-line {
-  border-top: 1px solid rgba(245,242,237,0.1);
-  padding-top: 1.75rem;
-}
-
-.manifesto-line:first-child { border-top: none; padding-top: 0; }
-
-.manifesto-label {
-  font-size: 0.62rem;
+.hero-right-label {
+  font-family: var(--mono);
+  font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(245,242,237,0.28);
-  margin-bottom: 0.6rem;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 1rem;
 }
 
-.manifesto-text {
-  font-family: var(--serif);
-  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
-  font-weight: 300;
-  color: rgba(245,242,237,0.85);
-  line-height: 1.35;
-  letter-spacing: 0.01em;
+.hero-right-tagline {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
 }
 
-.hero-stats {
-  border-top: 1px solid rgba(245,242,237,0.1);
-  padding-top: 2rem;
+.hero-right-tagline .accent { color: var(--volt); }
+
+.hero-right-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.hero-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 2rem 0;
+}
+
+.hero-stat-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
 }
 
 .hero-stat {
-  padding-right: 1.5rem;
-  border-right: 1px solid rgba(245,242,237,0.1);
+  background: var(--ink);
+  padding: 1.2rem 1rem;
 }
 
-.hero-stat:last-child { border-right: none; padding-right: 0; padding-left: 1rem; }
-.hero-stat:nth-child(2) { padding-left: 1rem; }
-
-.stat-num {
-  font-family: var(--serif);
-  font-size: 1.75rem;
-  font-weight: 300;
-  color: var(--off-white);
+.hero-stat-num {
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--white);
   line-height: 1;
-  margin-bottom: 0.35rem;
+  margin-bottom: 5px;
 }
 
-.stat-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
+.hero-stat-num.volt { color: var(--volt); }
+
+.hero-stat-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(245,242,237,0.28);
-  line-height: 1.5;
+  color: rgba(255,255,255,0.3);
 }
 
-/* ── SHARED ── */
-.section-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2.5rem;
+.hero-right-cta {
+  margin-top: 2rem;
+}
+
+/* ── TICKER ── */
+.ticker-bar {
+  background: var(--ink);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 12px 2.5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ticker-item {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.section-label::before {
-  content: '';
-  display: block;
-  width: 2rem;
-  height: 1px;
-  background: var(--accent);
-  opacity: 0.55;
-}
-
-h2 {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 3.2vw, 3.5rem);
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+.ticker-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--volt);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 /* ── PROBLEM ── */
 .problem {
-  background: var(--black);
-  color: var(--off-white);
+  background: var(--off);
+  padding: 7rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7rem;
-  align-items: center;
-  padding: 8rem 4rem;
+  align-items: start;
+  border-top: 1px solid var(--rule);
 }
 
-.problem .section-label { color: var(--accent-light); }
-.problem .section-label::before { background: var(--accent-light); }
-.problem h2 { color: var(--off-white); }
+h2 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+h2 .outline {
+  -webkit-text-stroke: 2px var(--ink);
+  color: transparent;
+}
+
+.section-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: var(--muted);
+}
 
 .problem-body {
-  font-size: 1rem;
-  line-height: 1.9;
-  color: rgba(245,242,237,0.58);
+  font-size: 15px;
+  line-height: 1.85;
+  color: #555;
 }
 
-.problem-body p + p { margin-top: 1.5rem; }
+.problem-body p + p { margin-top: 1.2rem; }
 
-.problem-points { display: flex; flex-direction: column; }
+.problem-points { display: flex; flex-direction: column; gap: 0; }
 
 .problem-point {
-  padding: 2rem 0;
-  border-bottom: 1px solid rgba(245,242,237,0.08);
   display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  gap: 1.25rem;
+  grid-template-columns: 36px 1fr;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
 }
 
-.problem-point:first-child { border-top: 1px solid rgba(245,242,237,0.08); }
+.problem-point:first-child { border-top: 1px solid var(--rule); }
 
 .problem-num {
-  font-family: var(--serif);
-  font-size: 0.95rem;
-  color: rgba(245,242,237,0.18);
-  padding-top: 0.18rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  padding-top: 3px;
+  letter-spacing: 0.06em;
 }
 
 .problem-title {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--off-white);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.4rem;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
 }
 
 .problem-text {
-  font-size: 0.88rem;
-  line-height: 1.75;
-  color: rgba(245,242,237,0.52);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
 }
 
 /* ── SERVICES ── */
 .services {
-  padding: 8rem 4rem;
+  padding: 7rem 4rem;
+  border-top: 1px solid var(--rule);
 }
 
-.services-top {
+.services-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
   align-items: end;
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 
-.services-intro-note {
-  font-size: 0.95rem;
-  line-height: 1.88;
-  color: rgba(14,14,13,0.58);
-  padding-bottom: 0.2rem;
+.services-intro {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
 }
 
 .services-grid {
@@ -387,502 +576,524 @@ h2 {
 }
 
 .svc {
-  background: var(--off-white);
-  padding: 3rem;
+  background: var(--white);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .svc.dark {
-  background: var(--black);
+  background: var(--ink);
 }
 
-.svc-tag {
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.75rem;
+.svc-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--volt);
+  margin-bottom: 1.5rem;
   display: block;
 }
 
-.svc.dark .svc-tag { color: var(--accent-light); }
+.svc.dark .svc-num { color: var(--volt); }
 
 .svc-name {
-  font-family: var(--serif);
-  font-size: 2.1rem;
-  font-weight: 300;
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 800;
   line-height: 1.1;
-  color: var(--black);
+  letter-spacing: -0.025em;
+  color: var(--ink);
   margin-bottom: 0.5rem;
 }
 
-.svc.dark .svc-name { color: var(--off-white); }
+.svc.dark .svc-name { color: var(--white); }
 
 .svc-price {
-  font-size: 0.78rem;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
-  color: rgba(14,14,13,0.32);
-  margin-bottom: 1.75rem;
 }
 
-.svc.dark .svc-price { color: rgba(245,242,237,0.32); }
+.svc.dark .svc-price { color: rgba(255,255,255,0.3); }
 
 .svc-desc {
-  font-size: 0.9rem;
-  line-height: 1.88;
-  color: rgba(14,14,13,0.6);
-  margin-bottom: 2rem;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
-.svc.dark .svc-desc { color: rgba(245,242,237,0.6); }
+.svc.dark .svc-desc { color: rgba(255,255,255,0.5); }
 
-.svc-deliverables { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
-.svc.dark .svc-deliverables { border-color: rgba(245,242,237,0.1); }
+.svc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.2rem;
+}
 
-.dlv-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
+.svc.dark .svc-tags { border-color: rgba(255,255,255,0.1); }
+
+.svc-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(14,14,13,0.32);
-  margin-bottom: 0.75rem;
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  color: var(--muted);
 }
 
-.svc.dark .dlv-label { color: rgba(245,242,237,0.32); }
-
-.dlv-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-
-.dlv-item {
-  font-size: 0.72rem;
-  padding: 0.28rem 0.72rem;
-  border: 1px solid rgba(14,14,13,0.12);
-  color: rgba(14,14,13,0.52);
-}
-
-.svc.dark .dlv-item {
-  border-color: rgba(245,242,237,0.14);
-  color: rgba(245,242,237,0.52);
+.svc.dark .svc-tag {
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.4);
 }
 
 .svc-addon {
   grid-column: 1 / -1;
-  background: var(--off-white);
-  padding: 2.25rem 3rem;
+  background: var(--volt);
+  padding: 2rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
-  border-top: 1px solid var(--rule);
+  gap: 3rem;
 }
 
-.svc-addon .svc-name { font-size: 1.35rem; margin-bottom: 0.2rem; }
-.svc-addon .svc-desc { margin-bottom: 0; font-size: 0.88rem; max-width: 62ch; }
+.svc-addon .svc-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  color: var(--ink);
+}
+
+.svc-addon .svc-desc {
+  margin-bottom: 0;
+  font-size: 13px;
+  max-width: 60ch;
+  color: rgba(8,8,8,0.65);
+}
 
 /* ── WORK ── */
 .work {
-  padding: 8rem 4rem;
+  padding: 7rem 4rem;
   border-top: 1px solid var(--rule);
+  background: var(--off);
 }
 
-.work-top {
+.work-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
   align-items: end;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .work-note {
-  font-size: 0.95rem;
-  line-height: 1.88;
-  color: rgba(14,14,13,0.58);
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted);
 }
 
 .scenarios { border-top: 1px solid var(--rule); }
 
 .scenario {
   display: grid;
-  grid-template-columns: 9rem 1fr 1fr;
-  gap: 3.5rem;
-  padding: 3.5rem 0;
+  grid-template-columns: 120px 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 0;
   border-bottom: 1px solid var(--rule);
+  align-items: start;
 }
 
 .scenario-type {
-  font-size: 0.68rem;
+  font-family: var(--mono);
+  font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
-  line-height: 2.1;
-  padding-top: 0.2rem;
+  color: var(--muted);
+  line-height: 2;
+  padding-top: 3px;
 }
 
 .scenario-sqft {
-  font-size: 0.68rem;
-  color: rgba(14,14,13,0.32);
-  letter-spacing: 0.06em;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(8,8,8,0.28);
+  margin-top: 4px;
 }
 
 .scenario-title {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .scenario-body {
-  font-size: 0.9rem;
-  line-height: 1.85;
-  color: rgba(14,14,13,0.56);
-  margin-bottom: 0.75rem;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
 }
 
 .scenario-note {
-  font-size: 0.72rem;
-  color: rgba(14,14,13,0.28);
-  font-style: italic;
-  letter-spacing: 0.04em;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(8,8,8,0.3);
+  letter-spacing: 0.06em;
 }
 
-.challenge-list { display: flex; flex-direction: column; gap: 0.9rem; padding-top: 0.2rem; }
+.challenge-list { display: flex; flex-direction: column; gap: 0; }
 
 .challenge {
   display: flex;
-  gap: 0.85rem;
-  font-size: 0.85rem;
-  color: rgba(14,14,13,0.56);
-  line-height: 1.6;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: flex-start;
 }
 
-.challenge-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-  margin-top: 0.58rem;
+.challenge:first-child { border-top: 1px solid var(--rule); }
+
+.challenge-arrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--volt);
+  filter: brightness(0.7);
+  margin-top: 3px;
   flex-shrink: 0;
-  opacity: 0.55;
 }
 
 /* ── ABOUT ── */
 .about {
-  background: var(--black);
-  padding: 8rem 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rem;
-  align-items: center;
-}
-
-.about .section-label { color: var(--accent-light); }
-.about .section-label::before { background: var(--accent-light); }
-.about h2 { color: var(--off-white); margin-bottom: 2.5rem; }
-
-/* Left panel — typographic treatment instead of photo */
-.about-left {
-  position: relative;
-}
-
-.about-manifesto {
-  border: 1px solid rgba(245,242,237,0.1);
-  padding: 3.5rem;
-  position: relative;
-}
-
-.about-manifesto::before {
-  content: '\201C';
-  font-family: var(--serif);
-  font-size: 8rem;
-  color: rgba(245,242,237,0.06);
-  position: absolute;
-  top: -1rem;
-  left: 2rem;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.about-quote {
-  font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-  font-weight: 300;
-  font-style: italic;
-  color: rgba(245,242,237,0.82);
-  line-height: 1.45;
-  margin-bottom: 2rem;
-}
-
-.about-quote-attr {
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(245,242,237,0.28);
-}
-
-.about-credentials {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.credential {
-  display: flex;
-  gap: 1.25rem;
-  align-items: baseline;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid rgba(245,242,237,0.07);
-}
-
-.credential:first-child { border-top: 1px solid rgba(245,242,237,0.07); }
-
-.credential-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(245,242,237,0.25);
-  min-width: 7rem;
-}
-
-.credential-value {
-  font-size: 0.88rem;
-  color: rgba(245,242,237,0.6);
-}
-
-.about-body {
-  font-size: 1rem;
-  line-height: 1.9;
-  color: rgba(245,242,237,0.6);
-}
-
-.about-body p + p { margin-top: 1.5rem; }
-
-.about-sig {
-  margin-top: 3.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(245,242,237,0.1);
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-style: italic;
-  color: rgba(245,242,237,0.38);
-}
-
-.about-location {
-  margin-top: 0.4rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(245,242,237,0.22);
-}
-
-/* ── CONTACT ── */
-.contact {
-  padding: 8rem 4rem;
+  background: var(--ink);
+  padding: 7rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8rem;
   align-items: start;
+}
+
+.about h2 { color: var(--white); }
+.about h2 .outline { -webkit-text-stroke: 2px var(--white); }
+.about .section-tag { color: rgba(255,255,255,0.3); }
+.about .section-tag::before { background: rgba(255,255,255,0.2); }
+
+.about-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-quote {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.about-quote-attr {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+.about-credentials { display: flex; flex-direction: column; }
+
+.credential {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  align-items: baseline;
+}
+
+.credential:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+
+.credential-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+}
+
+.credential-value {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+.about-body {
+  margin-bottom: 2rem;
+}
+
+.about-body p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 1.2rem;
+}
+
+.about-body p:last-child { margin-bottom: 0; }
+
+.about-sig {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.about-location {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.3);
+  margin-top: 4px;
+}
+
+/* ── FAQ ── */
+.faq {
+  padding: 7rem 4rem;
   border-top: 1px solid var(--rule);
 }
 
-.contact h2 { margin-bottom: 1.25rem; }
-
-.contact-body {
-  font-size: 0.95rem;
-  line-height: 1.88;
-  color: rgba(14,14,13,0.58);
-  margin-bottom: 2.75rem;
-  max-width: 42ch;
+.faq-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  margin-bottom: 4rem;
+  align-items: end;
 }
 
-.contact-details { display: flex; flex-direction: column; gap: 0; }
+.faq-intro {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.faq-list { display: flex; flex-direction: column; }
+
+.faq-item {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0;
+}
+
+.faq-item:last-child { border-bottom: 1px solid var(--rule); }
+
+.faq-q {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.faq-a {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* ── CONTACT ── */
+.contact {
+  background: var(--off);
+  padding: 7rem 4rem;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  align-items: start;
+}
+
+.contact h2 { margin-bottom: 1.5rem; }
+
+.contact-body {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+
+.contact-details { display: flex; flex-direction: column; }
 
 .contact-row {
-  display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-  padding: 1.1rem 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  padding: 0.9rem 0;
   border-bottom: 1px solid var(--rule);
-  font-size: 0.9rem;
+  align-items: baseline;
+  font-size: 14px;
 }
 
 .contact-row:first-child { border-top: 1px solid var(--rule); }
 
 .contact-row-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(14,14,13,0.3);
-  min-width: 4.5rem;
+  color: var(--muted);
 }
 
 .contact-row a {
-  color: var(--black);
+  color: var(--ink);
   text-decoration: none;
-  border-bottom: 1px solid rgba(14,14,13,0.15);
-  transition: color 0.2s, border-color 0.2s;
+  font-weight: 500;
 }
 
-.contact-row a:hover { color: var(--accent); border-color: var(--accent); }
+.contact-row a:hover { text-decoration: underline; }
 
 /* ── FORM ── */
-.form { display: flex; flex-direction: column; gap: 1.75rem; }
+.form { display: flex; flex-direction: column; gap: 16px; }
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-.form-field { display: flex; flex-direction: column; gap: 0.45rem; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
 
 .form-field label {
-  font-size: 0.62rem;
+  font-family: var(--mono);
+  font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(14,14,13,0.35);
+  color: var(--muted);
 }
 
 .form-field input,
-.form-field textarea,
-.form-field select {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(14,14,13,0.14);
-  padding: 0.72rem 0;
-  font-family: var(--sans);
-  font-size: 0.92rem;
-  font-weight: 300;
-  color: var(--black);
+.form-field select,
+.form-field textarea {
+  font-family: var(--body);
+  font-size: 14px;
+  padding: 11px 14px;
+  border: 1px solid var(--rule);
+  background: var(--white);
+  color: var(--ink);
   outline: none;
-  width: 100%;
-  appearance: none;
+  transition: border-color 0.2s;
   -webkit-appearance: none;
   border-radius: 0;
-  transition: border-color 0.2s;
 }
-
-.form-field input::placeholder,
-.form-field textarea::placeholder { color: rgba(14,14,13,0.25); }
 
 .form-field input:focus,
-.form-field textarea:focus,
-.form-field select:focus { border-color: var(--accent); }
-
-.form-field textarea { resize: none; min-height: 7rem; }
-
-.form-submit {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.72rem;
-  background: var(--black);
-  color: var(--off-white);
-  border: none;
-  padding: 0.9rem 1.8rem;
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.2s, gap 0.3s;
-  margin-top: 0.25rem;
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--ink);
 }
 
-.form-submit:hover { background: var(--accent); gap: 1.1rem; }
-.form-submit:disabled { background: var(--accent); cursor: default; }
+.form-field textarea { resize: vertical; min-height: 120px; }
+
+.form-submit {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  background: var(--ink);
+  color: var(--white);
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.form-submit:hover { background: #2a2a2a; }
+.form-submit:disabled { opacity: 0.5; cursor: default; }
 
 .form-success {
   display: none;
-  padding: 1.5rem;
-  border: 1px solid rgba(14,14,13,0.12);
-  font-size: 0.9rem;
-  color: rgba(14,14,13,0.65);
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+  padding: 2rem;
+  border: 1px solid var(--rule);
+  background: var(--white);
 }
+
+.form-success a { color: var(--ink); }
 
 /* ── FOOTER ── */
 footer {
-  padding: 2rem 4rem;
-  border-top: 1px solid var(--rule);
+  background: var(--ink);
+  padding: 2rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 .footer-logo {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: 0.92rem;
-  letter-spacing: 0.14em;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
 }
 
 .footer-copy {
-  font-size: 0.7rem;
-  color: rgba(14,14,13,0.3);
-  letter-spacing: 0.04em;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.06em;
 }
 
-/* ── REVEAL ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem; }
 
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* ── HERO LOAD ANIMATION ── */
-.hero-left > * {
-  opacity: 0;
-  transform: translateY(16px);
-  animation: fadeUp 0.7s ease forwards;
-}
-
-.hero-left > *:nth-child(1) { animation-delay: 0.1s; }
-.hero-left > *:nth-child(2) { animation-delay: 0.22s; }
-.hero-left > *:nth-child(3) { animation-delay: 0.34s; }
-.hero-left > *:nth-child(4) { animation-delay: 0.46s; }
-
-.hero-right-content > * {
-  opacity: 0;
-  animation: fadeUp 0.7s ease forwards;
-}
-
-.hero-right-content > *:nth-child(1) { animation-delay: 0.35s; }
-.hero-right-content > *:nth-child(2) { animation-delay: 0.5s; }
-
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 960px) {
-  nav { padding: 1.2rem 1.5rem; }
-  .nav-links { display: none; }
+  .nav-links li:not(:last-child) { display: none; }
 
   .hero { grid-template-columns: 1fr; }
-  .hero-left { padding: 8rem 1.5rem 4rem; border-right: none; border-bottom: 1px solid var(--rule); }
-  .hero-right { min-height: auto; }
-  .hero-right-content { padding: 2.5rem 1.5rem; }
-  .hero-stats { grid-template-columns: repeat(3,1fr); gap: 0; }
-  .hero-bg-word { font-size: 8rem; }
+  .hero-right { display: none; }
+  .hero-left { padding: 3.5rem 1.5rem 3rem; border-right: none; }
 
-  .problem { grid-template-columns: 1fr; gap: 3.5rem; padding: 5rem 1.5rem; }
-  .services { padding: 5rem 1.5rem; }
-  .services-top { grid-template-columns: 1fr; gap: 2rem; }
+  .ticker-bar { padding: 12px 1.5rem; }
+
+  .problem,
+  .services,
+  .work,
+  .about,
+  .faq,
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .services-header,
+  .work-header,
+  .faq-header { grid-template-columns: 1fr; gap: 1.5rem; }
+
   .services-grid { grid-template-columns: 1fr; }
-  .svc-addon { flex-direction: column; gap: 1rem; }
 
-  .work { padding: 5rem 1.5rem; }
-  .work-top { grid-template-columns: 1fr; gap: 2rem; }
-  .scenario { grid-template-columns: 1fr; gap: 1.25rem; }
+  .svc-addon { flex-direction: column; gap: 1.5rem; }
 
-  .about { grid-template-columns: 1fr; gap: 4rem; padding: 5rem 1.5rem; }
-  .contact { grid-template-columns: 1fr; gap: 4rem; padding: 5rem 1.5rem; }
-  .form-row { grid-template-columns: 1fr; gap: 1.75rem; }
+  .scenario { grid-template-columns: 1fr; gap: 1rem; }
 
-  footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
 }
 </style>
 </head>
@@ -890,91 +1101,130 @@ footer {
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="nav-logo">Blackrowe Design</a>
+  <a href="#" class="nav-logo">Blackrowe<span></span></a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+    <li><a href="#contact" class="nav-cta">Start a project</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <p class="eyebrow">Commercial Spatial Design</p>
-    <h1>Your space is either<br>working for your<br>business —<br><em>or against it.</em></h1>
-    <p class="hero-body">Before a single contractor is hired, Blackrowe Design helps businesses turn leased and purchased commercial spaces into environments that guide customers, support teams, and reflect the brand.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn">Free consultation →</a>
-      <a href="#services" class="btn btn-ghost">See services</a>
+    <div class="hero-left-top">
+      <div class="eyebrow">
+        <div class="eyebrow-dot"></div>
+        Commercial Spatial Design · NorCal
+      </div>
+      <h1>Spaces that<br>work as hard<br>as <span class="outline">you do.</span></h1>
+      <p class="hero-body">Most commercial interiors are designed to look good in photos. We design them to perform — guiding customers, supporting teams, and expressing your brand without you having to explain it.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn">Start a project →</a>
+        <a href="#work" class="btn btn-ghost">See our work</a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="meta-val">Free</div>
+        <div class="meta-label">First consultation</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-val">Nevada City, CA</div>
+        <div class="meta-label">Based in</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-val">Sac · Reno · Tahoe</div>
+        <div class="meta-label">Serving</div>
+      </div>
     </div>
   </div>
+
   <div class="hero-right">
-    <div class="hero-bg-word">Space</div>
+    <div class="hero-right-bg-text">BR</div>
     <div class="hero-right-content">
-      <div class="hero-manifesto">
-        <div class="manifesto-line">
-          <div class="manifesto-label">The discipline</div>
-          <div class="manifesto-text">How people move, pause, gather, and leave — designed with intention.</div>
-        </div>
-        <div class="manifesto-line">
-          <div class="manifesto-label">The outcome</div>
-          <div class="manifesto-text">Every square foot earning its place.</div>
-        </div>
-        <div class="manifesto-line">
-          <div class="manifesto-label">The difference</div>
-          <div class="manifesto-text">We think like a business owner, not a decorator.</div>
+      <div>
+        <div class="hero-right-label">Design philosophy</div>
+        <div class="hero-right-tagline">Business logic first.<br><span class="accent">Aesthetics follow.</span></div>
+        <p class="hero-right-sub">No amount of pretty can fix a space that doesn't work. Get the spatial logic right first — everything else follows.</p>
+        <hr class="hero-divider">
+        <div class="hero-stat-row">
+          <div class="hero-stat">
+            <div class="hero-stat-num volt">Free</div>
+            <div class="hero-stat-label">First consult</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">Remote</div>
+            <div class="hero-stat-label">Available too</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">3</div>
+            <div class="hero-stat-label">Core services</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">1-on-1</div>
+            <div class="hero-stat-label">Direct with Josh</div>
+          </div>
         </div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="stat-num">$750</div>
-          <div class="stat-label">Engagements from</div>
-        </div>
-        <div class="hero-stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Service types</div>
-        </div>
-        <div class="hero-stat">
-          <div class="stat-num">Free</div>
-          <div class="stat-label">First consultation</div>
-        </div>
+      <div class="hero-right-cta">
+        <a href="tel:5305577879" class="btn btn-volt" style="width:100%; justify-content:center;">530-557-7879</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TICKER -->
+<div class="ticker-bar" aria-hidden="true">
+  <div class="ticker-item"><div class="ticker-dot"></div>Retail</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Hospitality</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Wellness Studios</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Food &amp; Beverage</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Professional Office</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Remote Projects Welcome</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Sacramento</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Reno</div>
+  <div class="ticker-item"><div class="ticker-dot"></div>Lake Tahoe</div>
+</div>
+
 <!-- PROBLEM -->
-<section class="problem reveal">
+<section class="problem reveal" id="problem">
   <div>
-    <p class="section-label">The problem</p>
-    <h2>Space design isn't<br>decoration.<br><em>It's operations.</em></h2>
+    <div class="section-tag">The Problem</div>
+    <h2>Pretty doesn't<br>pay the <span class="outline">rent.</span></h2>
     <div class="problem-body">
-      <p>Most businesses treat space as an afterthought. They sign a lease, hire a contractor, and start moving furniture. Then they wonder why the checkout line creates a bottleneck, why customers walk past the highest-margin display, or why the team avoids the conference room.</p>
-      <p>Every square foot of a commercial space is either earning or costing you. The difference is spatial design — how people move, pause, engage, and leave.</p>
+      <p>Most commercial spaces are designed by people who think about aesthetics first. The result looks good on Instagram and fails in practice — customers confused, staff frustrated, conversions flat.</p>
+      <p>Blackrowe Design flips that. We start with how your space needs to function for your specific business, then build an environment around that logic. The aesthetic is the last layer, not the first.</p>
     </div>
   </div>
   <div class="problem-points">
     <div class="problem-point">
-      <span class="problem-num">01</span>
+      <div class="problem-num">01</div>
       <div>
-        <div class="problem-title">You just signed a lease</div>
-        <div class="problem-text">Before you build anything out, a spatial audit will save you from expensive decisions you can't undo later.</div>
+        <div class="problem-title">Poor customer flow costs you revenue</div>
+        <div class="problem-text">Confused customers leave. Friction at the wrong moment kills conversions. Spatial logic is a direct business lever most owners never touch.</div>
       </div>
     </div>
     <div class="problem-point">
-      <span class="problem-num">02</span>
+      <div class="problem-num">02</div>
       <div>
-        <div class="problem-title">Your current space isn't working</div>
-        <div class="problem-text">Customers aren't moving through it the way you need them to. Something's off and you can't name it.</div>
+        <div class="problem-title">Generic spaces don't build brands</div>
+        <div class="problem-text">When your space looks like everyone else's, you're competing on price. A distinctive environment gives customers something to remember — and talk about.</div>
       </div>
     </div>
     <div class="problem-point">
-      <span class="problem-num">03</span>
+      <div class="problem-num">03</div>
       <div>
-        <div class="problem-title">You're rebranding or expanding</div>
-        <div class="problem-text">Your space needs to catch up with what your business has become.</div>
+        <div class="problem-title">Expensive mistakes happen early</div>
+        <div class="problem-text">A floor plan committed to at signing is almost impossible to fix later. Getting spatial strategy right before build-out is orders of magnitude cheaper than fixing it after.</div>
+      </div>
+    </div>
+    <div class="problem-point">
+      <div class="problem-num">04</div>
+      <div>
+        <div class="problem-title">Most designers don't think like business owners</div>
+        <div class="problem-text">Beautiful portfolios, no ROI conversation. Blackrowe Design starts with your business model and works backwards to the space.</div>
       </div>
     </div>
   </div>
@@ -982,67 +1232,62 @@ footer {
 
 <!-- SERVICES -->
 <section class="services reveal" id="services">
-  <div class="services-top">
+  <div class="services-header">
     <div>
-      <p class="section-label">Services</p>
-      <h2>Two ways to<br>work together</h2>
+      <div class="section-tag">Services</div>
+      <h2>What we<br><span class="outline">do.</span></h2>
     </div>
-    <p class="services-intro-note">I work with retail, hospitality, wellness, and professional office clients throughout the Sacramento–Reno–Tahoe corridor, and take select remote engagements. Every project begins with a free consultation.</p>
+    <p class="services-intro">Three focused services — from early strategy through to execution. Most clients start with Spatial Strategy and add from there. All projects begin with a free consultation.</p>
   </div>
+
   <div class="services-grid">
     <div class="svc">
-      <span class="svc-tag">Entry offering</span>
-      <div class="svc-name">Space Flow Audit</div>
-      <div class="svc-price">Starting at $750 · remote or on-site</div>
-      <p class="svc-desc">An objective, outside-eye analysis of how your space functions for customers and staff. I review your floor plan, circulation patterns, sight lines, zoning, and friction points — then deliver a written report with annotated diagrams and a prioritized list of recommendations.</p>
-      <div class="svc-deliverables">
-        <div class="dlv-label">What you receive</div>
-        <div class="dlv-list">
-          <span class="dlv-item">Annotated floor plan</span>
-          <span class="dlv-item">Friction point analysis</span>
-          <span class="dlv-item">Priority recommendations</span>
-          <span class="dlv-item">30-min debrief call</span>
-        </div>
+      <span class="svc-num">01 / Strategy</span>
+      <div class="svc-name">Spatial Strategy</div>
+      <div class="svc-price">Starting point for most projects</div>
+      <div class="svc-desc">Before finishes, before furniture, before anything aesthetic — we solve how your space should work. Flow, zoning, customer journey, team movement. The logic layer that everything else is built on.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Space analysis</span>
+        <span class="svc-tag">Flow mapping</span>
+        <span class="svc-tag">Zoning plan</span>
+        <span class="svc-tag">Floor plan concept</span>
       </div>
     </div>
+
     <div class="svc dark">
-      <span class="svc-tag">Core offering</span>
-      <div class="svc-name">Commercial Design Package</div>
-      <div class="svc-price">$3,500–$7,500 · scoped per project</div>
-      <p class="svc-desc">A complete spatial design concept — from zoning and customer flow strategy through furniture layout, material direction, lighting approach, and wayfinding. Everything you need to brief contractors and vendors with confidence.</p>
-      <div class="svc-deliverables">
-        <div class="dlv-label">What you receive</div>
-        <div class="dlv-list">
-          <span class="dlv-item">Spatial concept document</span>
-          <span class="dlv-item">Zoning + flow plan</span>
-          <span class="dlv-item">Furniture layout</span>
-          <span class="dlv-item">Finish direction</span>
-          <span class="dlv-item">Lighting strategy</span>
-          <span class="dlv-item">Vendor brief template</span>
-        </div>
+      <span class="svc-num">02 / Concept</span>
+      <div class="svc-name">Concept &amp; Direction</div>
+      <div class="svc-price">Follows or combines with Strategy</div>
+      <div class="svc-desc">Once the space works, we make it feel right. Material palette, atmosphere, lighting direction, brand expression in three dimensions. A document your contractor and vendors can actually use.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Finish palette</span>
+        <span class="svc-tag">Lighting direction</span>
+        <span class="svc-tag">Furniture concept</span>
+        <span class="svc-tag">Brand environment</span>
       </div>
     </div>
+
     <div class="svc-addon">
       <div>
-        <span class="svc-tag">Add-on</span>
-        <div class="svc-name">Design Management</div>
-        <p class="svc-desc">Once your concept is approved, I stay involved through implementation — coordinating contractors, sourcing vendors, keeping design intent intact from plan to opening day. Quoted per project as an add-on to the Design Package.</p>
+        <div class="svc-name">Implementation Support</div>
+        <div class="svc-desc">On-site during key phases, vendor coordination, spec review, and real-time problem solving as your space comes to life. Available as a standalone add-on to any project.</div>
       </div>
+      <a href="#contact" class="btn" style="flex-shrink:0;">Add to your project</a>
     </div>
   </div>
 </section>
 
 <!-- WORK -->
 <section class="work reveal" id="work">
-  <div class="work-top">
+  <div class="work-header">
     <div>
-      <p class="section-label">Work</p>
-      <h2>How the<br>thinking works</h2>
+      <div class="section-tag">Worked Scenarios</div>
+      <h2>How we<br><span class="outline">think.</span></h2>
     </div>
-    <p class="work-note">These are worked spatial scenarios — real business types, real constraints, real decisions. They show how I approach a space before touching a single finish selection.</p>
+    <p class="work-note">These are worked spatial scenarios — real business types, real constraints, real decisions. They show how Blackrowe Design approaches a space before touching a single finish selection.</p>
   </div>
-  <div class="scenarios">
 
+  <div class="scenarios">
     <div class="scenario">
       <div>
         <div class="scenario-type">Wellness<br>Studio</div>
@@ -1054,10 +1299,10 @@ footer {
         <p class="scenario-note">↳ Spatial concept · floor plan · finish direction</p>
       </div>
       <div class="challenge-list">
-        <div class="challenge"><span class="challenge-dot"></span>Entry zone slows arrival and signals transition from street to studio</div>
-        <div class="challenge"><span class="challenge-dot"></span>Treatment rooms acoustically separated using built-ins, not walls</div>
-        <div class="challenge"><span class="challenge-dot"></span>Retail placed at natural pause point in customer flow</div>
-        <div class="challenge"><span class="challenge-dot"></span>Natural light preserved and amplified throughout</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Entry zone slows arrival and signals transition from street to studio</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Treatment rooms acoustically separated using built-ins, not walls</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Retail placed at natural pause point in customer flow</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Natural light preserved and amplified throughout</div>
       </div>
     </div>
 
@@ -1072,10 +1317,10 @@ footer {
         <p class="scenario-note">↳ Spatial concept · floor plan · finish direction</p>
       </div>
       <div class="challenge-list">
-        <div class="challenge"><span class="challenge-dot"></span>Order and pickup separated to eliminate queue conflict</div>
-        <div class="challenge"><span class="challenge-dot"></span>Seating zoned by dwell time — quick solo, lingering social</div>
-        <div class="challenge"><span class="challenge-dot"></span>Window seating activated as street-visible amenity</div>
-        <div class="challenge"><span class="challenge-dot"></span>Merchandise placed at natural exit pause point</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Order and pickup separated to eliminate queue conflict</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Seating zoned by dwell time — quick solo, lingering social</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Window seating activated as street-visible amenity</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Merchandise placed at natural exit pause point</div>
       </div>
     </div>
 
@@ -1090,21 +1335,20 @@ footer {
         <p class="scenario-note">↳ Spatial concept · floor plan · finish direction</p>
       </div>
       <div class="challenge-list">
-        <div class="challenge"><span class="challenge-dot"></span>Reception designed as a composed arrival, not a waiting room</div>
-        <div class="challenge"><span class="challenge-dot"></span>Conference room accessible to clients without exposing working areas</div>
-        <div class="challenge"><span class="challenge-dot"></span>Offices acoustically separated by material, not distance</div>
-        <div class="challenge"><span class="challenge-dot"></span>Finishes calibrated to signal expertise without coldness</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Reception designed as a composed arrival, not a waiting room</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Conference room accessible to clients without exposing working areas</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Offices acoustically separated by material, not distance</div>
+        <div class="challenge"><span class="challenge-arrow">→</span>Finishes calibrated to signal expertise without coldness</div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about reveal" id="about">
-  <div class="about-left">
-    <div class="about-manifesto">
-      <p class="about-quote">No amount of pretty can fix a space that doesn't work. Get the spatial logic right first — everything else follows.</p>
+  <div>
+    <div class="about-card">
+      <p class="about-quote">"No amount of pretty can fix a space that doesn't work. Get the spatial logic right first — everything else follows."</p>
       <div class="about-quote-attr">— Design philosophy, Blackrowe Design</div>
     </div>
     <div class="about-credentials">
@@ -1126,11 +1370,12 @@ footer {
       </div>
     </div>
   </div>
+
   <div>
-    <p class="section-label">About</p>
-    <h2>I think like a<br><em>business owner.</em></h2>
+    <div class="section-tag">About</div>
+    <h2>I think like a<br><span class="outline">business owner.</span></h2>
     <div class="about-body">
-      <p>I'm Josh Pelham, a commercial spatial design consultant based in the Sierra Nevada foothills of Northern California. My path into spatial design isn't a traditional one — and I think that's an asset.</p>
+      <p>I'm Josh Pelham, a commercial spatial design consultant based in the Sierra Nevada foothills of Northern California. My path into spatial design isn't a traditional one — and that's an asset.</p>
       <p>I came at it from two directions: a genuine obsession with how spaces make people feel and behave, and a business owner's instinct for what actually drives outcomes. That combination means I think about your space differently than a decorator would.</p>
       <p>I'm not selling you a look. I'm helping you build an environment that serves your customers better, supports your team, and represents your brand without you having to explain it.</p>
       <p>Most projects begin with a free consultation — no pitch, just a conversation about your space and what you're trying to accomplish.</p>
@@ -1140,10 +1385,48 @@ footer {
   </div>
 </section>
 
+<!-- FAQ (SEO + AI optimization) -->
+<section class="faq reveal" id="faq">
+  <div class="faq-header">
+    <div>
+      <div class="section-tag">FAQ</div>
+      <h2>Common<br><span class="outline">questions.</span></h2>
+    </div>
+    <p class="faq-intro">Everything you need to know before starting a conversation. If something isn't covered here, just call or text — 530-557-7879.</p>
+  </div>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">What does Blackrowe Design actually do?</div>
+      <div class="faq-a">Blackrowe Design is a commercial spatial design consultancy. We help businesses — retail stores, restaurants, wellness studios, professional offices — design spaces that work: guiding customers, supporting staff, and expressing the brand clearly. We work on spatial strategy (how a space is organized and flows), design concept (the look, feel, and finish direction), and implementation support (on-site during build-out).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Where are you located and what areas do you serve?</div>
+      <div class="faq-a">Blackrowe Design is based in Nevada City, California, in the Sierra Nevada foothills. We primarily serve clients in Sacramento, Reno, and the Lake Tahoe region, and are available for remote projects anywhere in the US.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How is this different from hiring an interior designer?</div>
+      <div class="faq-a">Most interior designers lead with aesthetics — what the space looks like. Blackrowe Design leads with function — how the space works for your specific business. We think about customer flow, zoning, conversion points, and operational logic first. The aesthetic follows from that foundation, not the other way around.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What's the first step?</div>
+      <div class="faq-a">A free consultation — no pitch, no commitment. Just a conversation about your space, what you're planning, and what you're trying to accomplish. Call or text 530-557-7879, or use the contact form below.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What types of spaces do you work with?</div>
+      <div class="faq-a">We work with retail stores, restaurants and cafés, hospitality and wellness studios, professional offices, and other commercial spaces. If you have a commercial lease and a business to run out of it, we can probably help.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you work remotely?</div>
+      <div class="faq-a">Yes. Spatial Strategy and Concept &amp; Direction can both be delivered remotely with strong results. Implementation Support requires on-site presence, which we offer within the Sacramento–Reno–Tahoe region.</div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact reveal" id="contact">
   <div>
-    <p class="section-label">Contact</p>
+    <div class="section-tag">Contact</div>
     <h2>Start with a<br>conversation.</h2>
     <p class="contact-body">The first step is free and zero-pressure. Tell me about your space — what you're planning, what's not working, or what you're trying to accomplish — and we'll figure out together whether and how I can help.</p>
     <div class="contact-details">
@@ -1162,20 +1445,8 @@ footer {
     </div>
   </div>
 
-  <!-- 
-    FORM SETUP INSTRUCTIONS:
-    1. Go to formspree.io and sign up free
-    2. Create a new form — set the email to jshplhm@gmail.com
-    3. Copy your form endpoint (looks like https://formspree.io/f/xxxxxxxx)
-    4. Replace "mnjlwngk" below with just the xxxxxxxx part
-  -->
   <div>
-    <form
-      class="form"
-      id="contact-form"
-      action="https://formspree.io/f/mnjlwngk"
-      method="POST"
-    >
+    <form class="form" id="contact-form" action="https://formspree.io/f/mnjlwngk" method="POST">
       <div class="form-row">
         <div class="form-field">
           <label for="name">Your name</label>
@@ -1220,17 +1491,15 @@ footer {
 <!-- FOOTER -->
 <footer>
   <span class="footer-logo">Blackrowe Design</span>
-  <span class="footer-copy">© 2026 Blackrowe Design · Nevada City, California</span>
+  <span class="footer-copy">© 2026 Blackrowe Design · Nevada City, California · <a href="tel:5305577879" style="color:rgba(255,255,255,0.25); text-decoration:none;">530-557-7879</a></span>
 </footer>
 
 <script>
-  // Nav scroll shadow
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
 
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -1238,11 +1507,10 @@ footer {
         observer.unobserve(e.target);
       }
     });
-  }, { threshold: 0.07 });
+  }, { threshold: 0.06 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Form — handles both Formspree AJAX and fallback
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
   const submitBtn = document.getElementById('submit-btn');
@@ -1263,11 +1531,11 @@ footer {
         form.style.display = 'none';
         successMsg.style.display = 'block';
       } else {
-        submitBtn.textContent = 'Something went wrong — please call or text 530-557-7879';
+        submitBtn.textContent = 'Something went wrong — please call 530-557-7879';
         submitBtn.disabled = false;
       }
     } catch {
-      submitBtn.textContent = 'Something went wrong — please call or text 530-557-7879';
+      submitBtn.textContent = 'Something went wrong — please call 530-557-7879';
       submitBtn.disabled = false;
     }
   });
