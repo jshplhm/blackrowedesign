@@ -219,27 +219,28 @@ h1 .outline{-webkit-text-stroke:2px var(--text);color:transparent}
 [data-theme="dark"] .hero-right{background:#1a1614}
 [data-theme="dark"] .hero{background:#0c0c0c}
 [data-theme="dark"] .hero-left{background:#0c0c0c;border-right-color:rgba(255,255,255,.08)}
-[data-theme="dark"] .hero-right-bg-text{color:rgba(0,0,0,.1)}
+[data-theme="dark"] .hero-right-bg-text{color:rgba(255,255,255,.04)}
 .hero-right-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between}
 .hero-right-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1rem}
-[data-theme="dark"] .hero-right-label{color:rgba(0,0,0,.4)}
+[data-theme="dark"] .hero-right-label{color:rgba(255,255,255,.35)}
 .hero-right-tagline{font-family:var(--display);font-size:clamp(1.2rem,2vw,1.65rem);font-weight:800;line-height:1.15;letter-spacing:-.02em;margin-bottom:.6rem;color:#fff}
-[data-theme="dark"] .hero-right-tagline{color:#0a0a0a}
+[data-theme="dark"] .hero-right-tagline{color:#ffffff}
 .hero-right-tagline .accent{color:var(--volt)}
-[data-theme="dark"] .hero-right-tagline .accent{color:#c94d1a}
+[data-theme="dark"] .hero-right-tagline .accent{color:#e8622a}
 .hero-right-sub{font-size:15px;line-height:1.8;color:rgba(255,255,255,.45);margin-bottom:2.5rem}
-[data-theme="dark"] .hero-right-sub{color:rgba(0,0,0,.5)}
+[data-theme="dark"] .hero-right-sub{color:rgba(255,255,255,.45)}
 .hero-divider{border:none;border-top:1px solid rgba(255,255,255,.08);margin:2rem 0}
-[data-theme="dark"] .hero-divider{border-color:rgba(0,0,0,.12)}
+[data-theme="dark"] .hero-divider{border-color:rgba(255,255,255,.1)}
 .hero-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08)}
-[data-theme="dark"] .hero-stat-row{background:rgba(0,0,0,.1)}
+[data-theme="dark"] .hero-stat-row{background:rgba(255,255,255,.06)}
 .hero-stat{background:var(--bg-inv);padding:1.2rem 1rem}
+[data-theme="dark"] .hero-stat{background:#1a1614}
 .hero-stat-num{font-family:var(--mono);font-size:1.3rem;font-weight:500;color:#fff;line-height:1;margin-bottom:5px}
-[data-theme="dark"] .hero-stat-num{color:#0a0a0a}
+[data-theme="dark"] .hero-stat-num{color:#ffffff}
 .hero-stat-num.volt{color:var(--volt)}
-[data-theme="dark"] .hero-stat-num.volt{color:#c94d1a}
+[data-theme="dark"] .hero-stat-num.volt{color:#e8622a}
 .hero-stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-[data-theme="dark"] .hero-stat-label{color:rgba(0,0,0,.35)}
+[data-theme="dark"] .hero-stat-label{color:rgba(255,255,255,.35)}
 .hero-right-cta{margin-top:2rem}
 .ticker-bar{background:var(--bg-inv);padding:7px 2.5rem;display:flex;gap:2rem;align-items:center;overflow:hidden;border-top:1px solid rgba(255,255,255,.06)}
 .ticker-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap;flex-shrink:0}
@@ -414,14 +415,6 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 .mobile-menu-phone{font-family:var(--mono);font-size:15px;color:var(--text);text-decoration:none;display:block;margin-bottom:.4rem;font-weight:500}
 .mobile-menu-loc{font-family:var(--mono);font-size:11px;color:var(--text-3);letter-spacing:.08em}
 
-.floorplan-pair{display:grid;grid-template-columns:1fr 24px 1fr;gap:.5rem;align-items:center;margin:1.5rem 0;padding:1.2rem;background:var(--bg);border:1px solid var(--rule)}
-.floorplan-item{display:flex;flex-direction:column;gap:.5rem}
-.floorplan-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3)}
-.floorplan-svg{width:100%;height:auto;color:var(--text);display:block;max-height:180px}
-.fp-zone{font-family:var(--mono);font-size:7px;fill:var(--text);opacity:.55;letter-spacing:.08em;text-transform:uppercase}
-.fp-empty{font-family:var(--mono);font-size:8px;fill:var(--text-3);letter-spacing:.06em}
-.fp-sub{font-family:var(--mono);font-size:7px;fill:var(--text-3);letter-spacing:.04em}
-.floorplan-arrow{font-size:12px;color:var(--text-3);text-align:center}
 .scenario-metric{font-family:var(--mono);font-size:11px;color:var(--text-3);line-height:1.7;padding:.8rem 0 0;letter-spacing:.02em;border-top:1px solid var(--rule);margin-top:.4rem}
 .about-quote-block{border-left:2px solid var(--volt);padding-left:1.2rem;margin:2rem 0}
 .about-inline-quote{font-size:15px;line-height:1.8;color:rgba(255,255,255,.6);font-style:italic;margin-bottom:.5rem}
@@ -454,7 +447,6 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .pricing-note-inner{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
   .svc-addon{flex-direction:column;gap:1.5rem}
   .scenario{grid-template-columns:1fr;gap:1rem}
-  .floorplan-pair{grid-template-columns:1fr 16px 1fr}
   .form-row{grid-template-columns:1fr}
   footer{flex-direction:column;gap:.5rem;text-align:center}
   h1{font-size:3rem}
@@ -641,58 +633,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
         <h3 class="scenario-title">New yoga and massage studio, strip mall lease</h3>
         <p class="scenario-body">A long rectangular space with a single entrance. The challenge: create clear separation between retail, active studio, and treatment rooms without expensive construction, while delivering a calm, premium feel from the moment you walk in.</p>
         <p class="scenario-note">Spatial concept / floor plan / finish direction</p>
-        <div class="floorplan-pair">
-          <div class="floorplan-item">
-            <div class="floorplan-label">Before</div>
-            <svg viewBox="0 0 280 100" class="floorplan-svg" xmlns="http://www.w3.org/2000/svg">
-  <!-- outer shell -->
-  <rect x="2" y="2" width="276" height="96" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- door arc left side, centered vertically -->
-  <line x1="2" y1="44" x2="2" y2="56" stroke="none"/>
-  <line x1="2" y1="50" x2="22" y2="50" stroke="currentColor" stroke-width="1" opacity=".4"/>
-  <path d="M2 40 A20 20 0 0 1 22 58" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2,2" opacity=".5"/>
-  <!-- door gap -->
-  <rect x="0" y="40" width="4" height="20" fill="var(--bg)" opacity=".01"/>
-  <line x1="0" y1="40" x2="0" y2="60" stroke="none"/>
-  <!-- empty label -->
-  <text x="140" y="48" text-anchor="middle" class="fp-empty">Empty shell</text>
-  <text x="140" y="60" text-anchor="middle" class="fp-sub">1,400 sq ft · entrance left</text>
-</svg>
-          </div>
-          <div class="floorplan-arrow">&#8594;</div>
-          <div class="floorplan-item">
-            <div class="floorplan-label">After</div>
-            <svg viewBox="0 0 280 100" class="floorplan-svg" xmlns="http://www.w3.org/2000/svg">
-  <!-- outer shell -->
-  <rect x="2" y="2" width="276" height="96" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- door arc left -->
-  <line x1="2" y1="44" x2="22" y2="44" stroke="currentColor" stroke-width="1" opacity=".4"/>
-  <path d="M2 44 A20 20 0 0 1 22 62" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2,2" opacity=".5"/>
-  <!-- zone: entry 0-44 -->
-  <rect x="2" y="2" width="42" height="96" fill="currentColor" opacity=".05"/>
-  <line x1="44" y1="2" x2="44" y2="98" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="23" y="52" text-anchor="middle" class="fp-zone">ENTRY</text>
-  <!-- zone: retail 44-90 -->
-  <rect x="44" y="2" width="46" height="96" fill="currentColor" opacity=".03"/>
-  <line x1="90" y1="2" x2="90" y2="98" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="67" y="52" text-anchor="middle" class="fp-zone">RETAIL</text>
-  <!-- zone: studio 90-186 -->
-  <rect x="90" y="2" width="96" height="96" fill="currentColor" opacity=".07"/>
-  <line x1="186" y1="2" x2="186" y2="98" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="138" y="52" text-anchor="middle" class="fp-zone">STUDIO</text>
-  <!-- zone: treatment rooms 186-278 split into 3 -->
-  <rect x="186" y="2" width="92" height="96" fill="currentColor" opacity=".04"/>
-  <line x1="186" y1="34" x2="278" y2="34" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <line x1="186" y1="66" x2="278" y2="66" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="232" y="22" text-anchor="middle" class="fp-zone">TREATMENT</text>
-  <text x="232" y="53" text-anchor="middle" class="fp-zone">TREATMENT</text>
-  <text x="232" y="84" text-anchor="middle" class="fp-zone">TREATMENT</text>
-  <!-- ember flow arrow -->
-  <path d="M12 72 Q12 58 44 50 Q90 44 138 46 Q170 48 200 38" stroke="#e8622a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-  <polygon points="200,34 207,38 200,42" fill="#e8622a"/>
-</svg>
-          </div>
-        </div>
+        
       </div>
       <div class="challenge-list">
         <div class="challenge"><span class="challenge-arrow">-></span>Entry zone slows arrival and signals transition from street to studio</div>
@@ -709,55 +650,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
         <h3 class="scenario-title">First-time cafe owner, former retail space</h3>
         <p class="scenario-body">High foot traffic corner location. Priorities: fast throughput at peak hours, a reason to stay and spend more, and a spatial identity that feels local and considered, not generic.</p>
         <p class="scenario-note">Spatial concept / floor plan / finish direction</p>
-        <div class="floorplan-pair">
-          <div class="floorplan-item">
-            <div class="floorplan-label">Before</div>
-            <svg viewBox="0 0 220 160" class="floorplan-svg" xmlns="http://www.w3.org/2000/svg">
-  <!-- L-shaped outer shell: full rect minus top-right corner -->
-  <path d="M2,2 L120,2 L120,70 L218,70 L218,158 L2,158 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- corner entrance door arc -->
-  <line x1="120" y1="70" x2="120" y2="54" stroke="currentColor" stroke-width="1" opacity=".4"/>
-  <path d="M120 70 A18 18 0 0 0 104 54" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2,2" opacity=".5"/>
-  <!-- empty label -->
-  <text x="100" y="118" text-anchor="middle" class="fp-empty">Empty shell</text>
-  <text x="100" y="130" text-anchor="middle" class="fp-sub">900 sq ft · corner entrance</text>
-</svg>
-          </div>
-          <div class="floorplan-arrow">&#8594;</div>
-          <div class="floorplan-item">
-            <div class="floorplan-label">After</div>
-            <svg viewBox="0 0 220 160" class="floorplan-svg" xmlns="http://www.w3.org/2000/svg">
-  <!-- L-shaped outer shell -->
-  <path d="M2,2 L120,2 L120,70 L218,70 L218,158 L2,158 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- corner entrance door arc -->
-  <line x1="120" y1="70" x2="120" y2="54" stroke="currentColor" stroke-width="1" opacity=".4"/>
-  <path d="M120 70 A18 18 0 0 0 104 54" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2,2" opacity=".5"/>
-  <!-- zone: counter/order strip along top of lower L -->
-  <rect x="2" y="70" width="216" height="34" fill="currentColor" opacity=".07"/>
-  <line x1="2" y1="104" x2="218" y2="104" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="110" y="90" text-anchor="middle" class="fp-zone">ORDER COUNTER</text>
-  <!-- pickup separated right side -->
-  <rect x="160" y="104" width="58" height="54" fill="currentColor" opacity=".05"/>
-  <line x1="160" y1="104" x2="160" y2="158" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="189" y="134" text-anchor="middle" class="fp-zone">PICKUP</text>
-  <!-- social seating left -->
-  <rect x="2" y="104" width="90" height="54" fill="currentColor" opacity=".04"/>
-  <line x1="92" y1="104" x2="92" y2="158" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="46" y="134" text-anchor="middle" class="fp-zone">SOCIAL</text>
-  <!-- solo seating mid -->
-  <rect x="92" y="104" width="68" height="54" fill="currentColor" opacity=".06"/>
-  <text x="126" y="134" text-anchor="middle" class="fp-zone">SOLO</text>
-  <!-- window seating top arm -->
-  <rect x="2" y="2" width="118" height="68" fill="currentColor" opacity=".04"/>
-  <text x="61" y="40" text-anchor="middle" class="fp-zone">WINDOW SEATING</text>
-  <!-- ember flow arrow: enter corner, hit counter, split to seating -->
-  <path d="M112 66 Q108 82 90 90 Q60 98 46 106" stroke="#e8622a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-  <polygon points="43,110 48,103 53,108" fill="#e8622a"/>
-  <path d="M112 66 Q130 82 155 88 Q168 92 172 106" stroke="#e8622a" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-dasharray="4,2"/>
-  <polygon points="170,110 175,103 179,108" fill="#e8622a"/>
-</svg>
-          </div>
-        </div>
+        
       </div>
       <div class="challenge-list">
         <div class="challenge"><span class="challenge-arrow">-></span>Order and pickup separated to eliminate queue conflict</div>
@@ -774,58 +667,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
         <h3 class="scenario-title">Boutique law firm, newly leased floor</h3>
         <p class="scenario-body">A firm moving from shared space into its first dedicated floor. Needs to signal credibility from arrival while giving attorneys the privacy they require, without a closed-corridor feel.</p>
         <p class="scenario-note">Spatial concept / floor plan / finish direction</p>
-        <div class="floorplan-pair">
-          <div class="floorplan-item">
-            <div class="floorplan-label">Before</div>
-            <svg viewBox="0 0 280 130" class="floorplan-svg" xmlns="http://www.w3.org/2000/svg">
-  <!-- outer shell -->
-  <rect x="2" y="2" width="276" height="126" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- door arc left -->
-  <line x1="2" y1="57" x2="22" y2="57" stroke="currentColor" stroke-width="1" opacity=".4"/>
-  <path d="M2 57 A20 20 0 0 1 22 75" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2,2" opacity=".5"/>
-  <!-- empty label -->
-  <text x="140" y="62" text-anchor="middle" class="fp-empty">Open floor, no separation</text>
-  <text x="140" y="74" text-anchor="middle" class="fp-sub">2,200 sq ft · entrance left</text>
-</svg>
-          </div>
-          <div class="floorplan-arrow">&#8594;</div>
-          <div class="floorplan-item">
-            <div class="floorplan-label">After</div>
-            <svg viewBox="0 0 280 130" class="floorplan-svg" xmlns="http://www.w3.org/2000/svg">
-  <!-- outer shell -->
-  <rect x="2" y="2" width="276" height="126" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- door arc left -->
-  <line x1="2" y1="57" x2="22" y2="57" stroke="currentColor" stroke-width="1" opacity=".4"/>
-  <path d="M2 57 A20 20 0 0 1 22 75" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2,2" opacity=".5"/>
-  <!-- zone: reception 0-58 -->
-  <rect x="2" y="2" width="56" height="126" fill="currentColor" opacity=".07"/>
-  <line x1="58" y1="2" x2="58" y2="128" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="30" y="66" text-anchor="middle" class="fp-zone">RECEP</text>
-  <text x="30" y="76" text-anchor="middle" class="fp-zone">TION</text>
-  <!-- zone: conference 58-130 -->
-  <rect x="58" y="2" width="72" height="126" fill="currentColor" opacity=".04"/>
-  <line x1="130" y1="2" x2="130" y2="128" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <text x="94" y="62" text-anchor="middle" class="fp-zone">CONFERENCE</text>
-  <text x="94" y="72" text-anchor="middle" class="fp-zone">ROOM</text>
-  <!-- zone: private offices 130-220, split top/bottom -->
-  <rect x="130" y="2" width="90" height="126" fill="currentColor" opacity=".06"/>
-  <line x1="220" y1="2" x2="220" y2="128" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3,2"/>
-  <!-- office subdivisions -->
-  <line x1="130" y1="44" x2="220" y2="44" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2,2" opacity=".5"/>
-  <line x1="130" y1="86" x2="220" y2="86" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2,2" opacity=".5"/>
-  <text x="175" y="28" text-anchor="middle" class="fp-zone">OFFICE</text>
-  <text x="175" y="68" text-anchor="middle" class="fp-zone">OFFICE</text>
-  <text x="175" y="108" text-anchor="middle" class="fp-zone">OFFICE</text>
-  <!-- zone: staff support 220-278 -->
-  <rect x="220" y="2" width="58" height="126" fill="currentColor" opacity=".03"/>
-  <text x="249" y="62" text-anchor="middle" class="fp-zone">STAFF</text>
-  <text x="249" y="72" text-anchor="middle" class="fp-zone">SUPPORT</text>
-  <!-- ember flow: client path enters reception, goes to conference, stops -->
-  <path d="M12 80 Q30 78 30 66 Q30 30 94 20 Q94 60 94 110" stroke="#e8622a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-  <polygon points="90,112 94,120 98,112" fill="#e8622a"/>
-</svg>
-          </div>
-        </div>
+        
       </div>
       <div class="challenge-list">
         <div class="challenge"><span class="challenge-arrow">-></span>Reception designed as a composed arrival, not a waiting room</div>
