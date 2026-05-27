@@ -250,7 +250,7 @@ h1 .ember{color:var(--volt)}
 [data-theme="dark"] .hero-stat-label{color:rgba(255,255,255,.35)}
 .hero-right-cta{margin-top:2rem}
 .ticker-bar{background:var(--bg-inv);overflow:hidden;border-top:1px solid rgba(255,255,255,.06);touch-action:none;pointer-events:none}
-.ticker-bar>.inner{display:flex;gap:2rem;align-items:center;padding:7px 4rem}
+.ticker-bar>.inner{display:flex;align-items:center;padding:7px 4rem;gap:2.5rem;justify-content:center;overflow:hidden;flex-wrap:nowrap}
 .ticker-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap;flex-shrink:0}
 .ticker-dot{width:4px;height:4px;background:var(--volt);border-radius:50%;flex-shrink:0}
 
@@ -1016,6 +1016,32 @@ document.querySelectorAll('[data-ba-slider]').forEach(slider => {
     }
   });
 });
+
+
+// TICKER - show only items that fit at fixed gap, centered
+function fitTicker() {
+  const bar = document.querySelector('.ticker-bar .inner');
+  if (!bar) return;
+  const items = Array.from(bar.querySelectorAll('.ticker-item'));
+  const GAP = 40; // 2.5rem at 16px
+  items.forEach(i => i.style.display = 'flex');
+  const available = bar.clientWidth - 128; // subtract 4rem padding each side
+  // Find how many items fit with fixed gap
+  let total = 0;
+  let fitting = 0;
+  for (let i = 0; i < items.length; i++) {
+    const w = items[i].offsetWidth;
+    const needed = total + w + (fitting > 0 ? GAP : 0);
+    if (needed <= available) { total = needed; fitting++; }
+    else break;
+  }
+  // Show only fitting items, hide the rest
+  items.forEach((item, i) => {
+    item.style.display = i < fitting ? 'flex' : 'none';
+  });
+}
+fitTicker();
+window.addEventListener('resize', fitTicker);
 
 const form=document.getElementById('contact-form');
 const sMsg=document.getElementById('form-success');
