@@ -249,7 +249,8 @@ h1 .ember{color:var(--volt)}
 .hero-stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)}
 [data-theme="dark"] .hero-stat-label{color:rgba(255,255,255,.35)}
 .hero-right-cta{margin-top:2rem}
-.ticker-bar{background:var(--bg-inv);padding:7px 2.5rem;display:flex;gap:2rem;align-items:center;overflow:hidden;border-top:1px solid rgba(255,255,255,.06);touch-action:none;pointer-events:none}
+.ticker-bar{background:var(--bg-inv);overflow:hidden;border-top:1px solid rgba(255,255,255,.06);touch-action:none;pointer-events:none}
+.ticker-bar>.inner{display:flex;gap:2rem;align-items:center;padding:7px 4rem}
 .ticker-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap;flex-shrink:0}
 .ticker-dot{width:4px;height:4px;background:var(--volt);border-radius:50%;flex-shrink:0}
 
@@ -474,7 +475,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .hero-right{display:none}
   .hero-left{padding:3.5rem 1.5rem 3rem;border-right:none}
   .hero-inner{grid-template-columns:1fr}
-  .ticker-bar{padding:11px 1.5rem}
+  .ticker-bar>.inner{padding:11px 1.5rem}
   .problem>.inner,.services>.inner,.work>.inner,.about>.inner,.faq>.inner,.contact>.inner{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem}
   .framework>.inner{grid-template-columns:1fr;gap:1.5rem;padding:3rem 1.5rem}
   .framework-grid{grid-template-columns:1fr 1fr;margin-left:-1.5rem;margin-right:-1.5rem}
@@ -578,6 +579,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 </section>
 
 <div class="ticker-bar" aria-hidden="true">
+<div class="inner">
   <div class="ticker-item"><div class="ticker-dot"></div>Retail</div>
   <div class="ticker-item"><div class="ticker-dot"></div>Hospitality</div>
   <div class="ticker-item"><div class="ticker-dot"></div>Wellness Studios</div>
@@ -592,6 +594,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   <div class="ticker-item"><div class="ticker-dot"></div>Truckee</div>
   <div class="ticker-item"><div class="ticker-dot"></div>Reno</div>
   <div class="ticker-item"><div class="ticker-dot"></div>Lake Tahoe</div>
+</div>
 </div>
 
 <section class="problem reveal" id="problem">
