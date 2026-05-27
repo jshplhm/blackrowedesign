@@ -1023,7 +1023,7 @@ function fitTicker() {
   const bar = document.querySelector('.ticker-bar .inner');
   if (!bar) return;
   const items = Array.from(bar.querySelectorAll('.ticker-item'));
-  const GAP = 40; // 2.5rem at 16px
+  const GAP = 10; // 2.5rem at 16px
   items.forEach(i => i.style.display = 'flex');
   const available = bar.clientWidth - 128; // subtract 4rem padding each side
   // Find how many items fit with fixed gap
