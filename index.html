@@ -421,9 +421,9 @@ footer>.inner{padding:1.5rem 4rem;display:flex;justify-content:space-between;ali
 .inner{max-width:1440px;margin:0 auto;width:100%}
 nav>.inner{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0 4rem}
 .hamburger{display:none;width:44px;height:58px;border:none;border-left:1px solid var(--rule);background:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;flex-shrink:0}
-.hamburger span{display:block;width:18px;height:1.5px;background:var(--text);transition:transform .25s ease,opacity .25s ease}
+.hamburger span{display:block;width:18px;height:1.5px;background:var(--text);transition:transform .25s ease,opacity .25s ease;will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
 .mobile-menu{
@@ -446,7 +446,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   border-bottom:1px solid var(--rule);
   transition:color .15s;
 }
-.mobile-nav-link:first-child{border-top:1px solid var(--rule)}
+.mobile-nav-link:first-child{border-top:none}
 .mobile-nav-link:hover{color:var(--text-3)}
 .mobile-nav-cta{color:var(--volt) !important;margin-top:1.5rem;border:none !important}
 [data-theme="dark"] .mobile-nav-cta{color:var(--volt) !important}
@@ -483,7 +483,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .services-header,.work-header,.faq-header{grid-template-columns:1fr;gap:1.5rem}
   .services-grid{grid-template-columns:1fr;margin-left:-1.5rem;margin-right:-1.5rem}
   .pricing-note-inner{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
-  .svc-addon{flex-direction:column;align-items:flex-start;gap:1.5rem;padding:2rem 1.5rem}
+  .svc-addon{flex-direction:column;align-items:flex-start;gap:1.5rem;margin-left:-1.5rem;margin-right:-1.5rem;padding:2rem 1.5rem}
   .scenario{grid-template-columns:1fr;gap:1.5rem}
   .scenarios{gap:3.5rem}
   .form-row{grid-template-columns:1fr}
