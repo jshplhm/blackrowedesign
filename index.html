@@ -189,8 +189,8 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;font-weight:400;line-height:1.75;overflow-x:hidden;transition:background .3s,color .3s}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--bg);border-bottom:1px solid var(--rule);transition:background .3s,border-color .3s}
-nav.menu-open{border-bottom-color:transparent;transition:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;background:var(--bg);border-bottom:none;transition:background .3s}
+
 .nav-logo{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--text);text-decoration:none;text-transform:uppercase;display:flex;align-items:center;gap:8px}
 .nav-logo-dot{width:7px;height:7px;background:var(--volt);border-radius:50%;flex-shrink:0}
 .nav-right{display:flex;align-items:center}
@@ -905,13 +905,11 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 <script>
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
-const navEl = document.getElementById('nav');
 function closeMenu(){
   hamburger.classList.remove('open');
   mobileMenu.classList.remove('open');
   mobileMenu.setAttribute('aria-hidden','true');
   document.body.style.overflow='';
-  navEl.classList.remove('menu-open');
 }
 hamburger.addEventListener('click',()=>{
   const isOpen = mobileMenu.classList.contains('open');
@@ -921,7 +919,6 @@ hamburger.addEventListener('click',()=>{
     mobileMenu.classList.add('open');
     mobileMenu.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';
-    navEl.classList.add('menu-open');
   }
 });
 document.querySelectorAll('.mobile-nav-link').forEach(l=>l.addEventListener('click', closeMenu));
