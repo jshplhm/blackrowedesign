@@ -156,6 +156,11 @@
     },
     {
       "@type": "Question",
+      "name": "Do you provide drawings I can give to my contractor?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every project deliverable is built to be handed directly to your contractor, architect, or vendors. Spatial Strategy includes a floor plan concept with flow diagrams and zoning logic. Concept and Direction adds finish palettes, lighting direction, and brand environment documentation in a single document your team can build from."}
+    },
+    {
+      "@type": "Question",
       "name": "How do I get started with Blackrowe Spatial?",
       "acceptedAnswer": {"@type": "Answer", "text": "The first step is a free consultation with no pitch and no commitment. Call or text Josh Pelham at 530-557-7879, or use the contact form at blackrowe.com. The goal of the first call is to understand your space and figure out together whether the project makes sense."}
     },
@@ -236,7 +241,7 @@ h1 .ember{color:var(--volt)}
 [data-theme="dark"] .hero-stat-row{background:rgba(255,255,255,.06)}
 .hero-stat{background:var(--bg-inv);padding:1.2rem 1rem}
 [data-theme="dark"] .hero-stat{background:#141414}
-[data-theme="dark"] .about .hero-stat-num{font-family:var(--mono);font-size:1.3rem;font-weight:500;color:#fff;line-height:1;margin-bottom:5px}
+.hero-stat-num{font-family:var(--mono);font-size:1.3rem;font-weight:500;color:#fff;line-height:1;margin-bottom:5px}
 [data-theme="dark"] .hero-stat-num{color:#ffffff}
 .hero-stat-num.volt{color:var(--volt)}
 [data-theme="dark"] .hero-stat-num.volt{color:var(--volt)}
@@ -261,12 +266,25 @@ h2 .ember{color:var(--volt)}
 .problem-num{font-family:var(--mono);font-size:10px;color:var(--text-3);padding-top:3px;letter-spacing:.06em}
 .problem-title{font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:5px;color:var(--text)}
 .problem-text{font-size:15px;line-height:1.75;color:var(--text-2)}
+
+/* FRAMEWORK STRIP */
+.framework{background:var(--bg-inv);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.framework>.inner{padding:3.5rem 4rem;display:grid;grid-template-columns:auto 1fr;gap:5rem;align-items:start}
+.framework-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);padding-top:8px;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.framework-label::before{content:'';display:block;width:18px;height:1px;background:rgba(255,255,255,.3)}
+.framework-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08)}
+.framework-item{background:var(--bg-inv);padding:1.5rem 1.75rem;display:flex;flex-direction:column;gap:.5rem}
+[data-theme="dark"] .framework-item{background:#0c0c0c}
+.framework-num{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--volt)}
+.framework-name{font-family:var(--display);font-size:1.05rem;font-weight:700;letter-spacing:-.01em;color:#fff;line-height:1.2;margin-bottom:.2rem}
+.framework-text{font-family:var(--body);font-size:13px;line-height:1.6;color:rgba(255,255,255,.5)}
+
 .services{border-top:1px solid var(--rule);overflow:hidden;background:var(--bg)}
 .services>.inner{padding:7rem 4rem}
 .services-header{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:end;margin-bottom:4rem}
 .services-intro{font-size:16px;line-height:1.85;color:var(--text-2)}
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)}
-.svc{background:var(--bg);padding:2.5rem}
+.svc{background:var(--bg);padding:2.5rem;display:flex;flex-direction:column}
 .svc.dark{background:var(--bg-inv)}
 .svc-num{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--volt);margin-bottom:1.5rem;display:block}
 .svc.dark .svc-num{color:var(--volt)}
@@ -276,7 +294,11 @@ h2 .ember{color:var(--volt)}
 .svc.dark .svc-price{color:var(--volt)}
 .svc-desc{font-size:15px;line-height:1.85;color:var(--text-2);margin-bottom:1.5rem}
 .svc.dark .svc-desc{color:rgba(255,255,255,.5)}
-.svc-tags{display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid var(--rule);padding-top:1.2rem}
+.svc-deliverable{font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--text);background:var(--bg-off);border-left:2px solid var(--volt);padding:.9rem 1rem;margin-bottom:1.5rem;letter-spacing:.01em}
+.svc.dark .svc-deliverable{color:#fff;background:rgba(255,255,255,.04);border-left-color:var(--volt)}
+.svc-deliverable-label{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px;font-weight:500}
+.svc.dark .svc-deliverable-label{color:rgba(255,255,255,.4)}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid var(--rule);padding-top:1.2rem;margin-top:auto}
 .svc.dark .svc-tags{border-color:rgba(255,255,255,.1)}
 .svc-tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--rule);color:var(--text-2)}
 .svc.dark .svc-tag{border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.4)}
@@ -292,17 +314,33 @@ h2 .ember{color:var(--volt)}
 .work>.inner{padding:7rem 4rem}
 .work-header{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:end;margin-bottom:4rem}
 .work-note{font-size:16px;line-height:1.85;color:var(--text-2)}
-.scenarios{border-top:1px solid var(--rule)}
-.scenario{display:grid;grid-template-columns:120px 1fr 1fr;gap:3rem;padding:3rem 0;border-bottom:1px solid var(--rule);align-items:start}
-.scenario-type{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);line-height:2;padding-top:3px}
-.scenario-sqft{font-family:var(--mono);font-size:10px;color:var(--text-3);margin-top:4px;opacity:.6}
-.scenario-title{font-family:var(--display);font-size:1.3rem;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-bottom:.8rem;color:var(--text)}
-.scenario-body{font-size:15px;line-height:1.8;color:var(--text-2);margin-bottom:.6rem}
-.scenario-note{font-family:var(--mono);font-size:10px;color:var(--text-3);letter-spacing:.06em}
-.challenge-list{display:flex;flex-direction:column}
-.challenge{display:flex;gap:12px;font-size:15px;color:var(--text-2);line-height:1.65;padding:.7rem 0;border-bottom:1px solid var(--rule);align-items:flex-start}
-.challenge:first-child{border-top:1px solid var(--rule)}
-.challenge-arrow{font-family:var(--mono);font-size:10px;color:var(--text-3);margin-top:4px;flex-shrink:0}
+.scenarios{display:flex;flex-direction:column;gap:5rem}
+.scenario{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;padding-top:3rem;border-top:1px solid var(--rule)}
+.scenario:first-child{padding-top:0;border-top:none}
+.scenario-meta{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.2rem}
+.scenario-type{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--volt)}
+.scenario-sqft{font-family:var(--mono);font-size:10px;color:var(--text-3);letter-spacing:.06em}
+.scenario-title{font-family:var(--display);font-size:1.4rem;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-bottom:.8rem;color:var(--text)}
+.scenario-body{font-size:15px;line-height:1.75;color:var(--text-2);margin-bottom:1.2rem}
+.scenario-claim{font-family:var(--mono);font-size:11px;letter-spacing:.06em;line-height:1.7;color:var(--text);background:var(--bg);border-left:2px solid var(--volt);padding:.8rem 1rem}
+
+/* BEFORE / AFTER SLIDER */
+.ba-slider{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:var(--bg);user-select:none;-webkit-user-select:none;border:1px solid var(--rule)}
+.ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.ba-img-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;background:var(--bg);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);pointer-events:none}
+.ba-img-placeholder.before{background:repeating-linear-gradient(45deg,var(--bg-off),var(--bg-off) 12px,var(--bg) 12px,var(--bg) 24px)}
+.ba-img-placeholder.after{background:repeating-linear-gradient(45deg,#e8eef7,#e8eef7 12px,#f4f7fc 12px,#f4f7fc 24px)}
+[data-theme="dark"] .ba-img-placeholder.before{background:repeating-linear-gradient(45deg,#101010,#101010 12px,#181818 12px,#181818 24px);color:rgba(255,255,255,.4)}
+[data-theme="dark"] .ba-img-placeholder.after{background:repeating-linear-gradient(45deg,#1a2030,#1a2030 12px,#222a3e 12px,#222a3e 24px);color:rgba(200,255,0,.5)}
+.ba-after-wrap{position:absolute;inset:0;overflow:hidden;width:50%}
+.ba-handle{position:absolute;top:0;bottom:0;width:2px;background:var(--volt);left:50%;transform:translateX(-50%);cursor:ew-resize;z-index:3;touch-action:none}
+.ba-handle::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:var(--volt);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.ba-handle::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:none;border-left:2px solid #0a0a0a;border-right:2px solid #0a0a0a;border-top:2px solid transparent;border-bottom:2px solid transparent;border-radius:0;z-index:1}
+[data-theme="dark"] .ba-handle::after{border-left-color:#0a0a0a;border-right-color:#0a0a0a}
+.ba-label{position:absolute;top:1rem;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:5px 10px;background:rgba(10,10,10,.75);color:#fff;z-index:2;pointer-events:none}
+.ba-label.before{left:1rem}
+.ba-label.after{right:1rem;background:var(--volt);color:#0a0a0a}
+
 .about{background:var(--bg-inv)}
 .about>.inner{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:start}
 .about h2{color:#fff}
@@ -312,7 +350,6 @@ h2 .ember{color:var(--volt)}
 .about .section-tag::before{background:rgba(255,255,255,.25)}
 .about-card{border:1px solid rgba(255,255,255,.15);padding:2.5rem;margin-bottom:2rem}
 
-
 .testimonial-block{border-left:2px solid var(--rule);padding-left:1.2rem;margin:2rem 0}
 .testimonial-quote{font-size:15px;line-height:1.85;color:rgba(255,255,255,.6);font-style:italic;margin-bottom:.8rem}
 .testimonial-attr{display:flex;flex-direction:column;gap:2px}
@@ -320,12 +357,6 @@ h2 .ember{color:var(--volt)}
 .testimonial-biz{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.28)}
 [data-theme="dark"] .testimonial-biz{color:rgba(0,0,0,.3)}
 .about-quote{font-family:var(--display);font-size:1.15rem;font-weight:700;line-height:1.45;letter-spacing:-.02em;color:rgba(255,255,255,.9);margin-bottom:1rem}
-.testimonial-block{border-left:2px solid var(--rule);padding-left:1.2rem;margin:2rem 0}
-.testimonial-quote{font-size:15px;line-height:1.85;color:rgba(255,255,255,.6);font-style:italic;margin-bottom:.8rem}
-.testimonial-attr{display:flex;flex-direction:column;gap:2px}
-.testimonial-name{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.testimonial-biz{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.28)}
-[data-theme="dark"] .testimonial-biz{color:rgba(0,0,0,.3)}
 .about-quote-attr{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(128,128,128,.6)}
 .about-credentials{display:flex;flex-direction:column}
 .credential{display:grid;grid-template-columns:100px 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.1);align-items:baseline}
@@ -335,6 +366,7 @@ h2 .ember{color:var(--volt)}
 .about-body{margin-bottom:2rem}
 .about-body p{font-size:16px;line-height:1.85;color:rgba(255,255,255,.55);margin-bottom:1.2rem}
 .about-body p:last-child{margin-bottom:0}
+.about-pullquote{font-family:var(--display);font-size:1.25rem;font-weight:700;line-height:1.4;letter-spacing:-.02em;color:#fff;border-left:2px solid var(--volt);padding-left:1.25rem;margin:2rem 0;display:block}
 .about-sig{font-family:var(--display);font-size:1.1rem;font-weight:700;color:#ffffff;margin-top:2rem}
 .about-location{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-top:4px}
 
@@ -386,7 +418,6 @@ footer>.inner{padding:1.5rem 4rem;display:flex;justify-content:space-between;ali
 [data-theme="dark"] .footer-stack{color:rgba(0,0,0,.3)}
 [data-theme="dark"] .footer-copy{color:rgba(0,0,0,.3)}
 .footer-copy a{color:inherit;text-decoration:none}
-/* HAMBURGER */
 .inner{max-width:1440px;margin:0 auto;width:100%}
 nav>.inner{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0 4rem}
 .hamburger{display:none;width:44px;height:58px;border:none;border-left:1px solid var(--rule);background:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;flex-shrink:0}
@@ -395,7 +426,6 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
-/* MOBILE MENU OVERLAY */
 .mobile-menu{
   position:fixed;top:58px;left:0;right:0;bottom:0;z-index:190;
   background:var(--bg);
@@ -424,20 +454,14 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 .mobile-menu-phone{font-family:var(--mono);font-size:15px;color:var(--text);text-decoration:none;display:block;margin-bottom:.4rem;font-weight:500}
 .mobile-menu-loc{font-family:var(--mono);font-size:11px;color:var(--text-3);letter-spacing:.08em}
 
-.scenario-metric{font-family:var(--mono);font-size:11px;color:var(--text-3);line-height:1.7;padding:.8rem 0 0;letter-spacing:.02em;border-top:1px solid var(--rule);margin-top:.4rem}
-.about-quote-block{border-left:2px solid var(--rule);padding-left:1.2rem;margin:2rem 0}
-.about-inline-quote{font-size:15px;line-height:1.8;color:rgba(255,255,255,.6);font-style:italic;margin-bottom:.5rem}
-[data-theme="dark"] .about-inline-quote{color:rgba(0,0,0,.6)}
-.about-inline-attr{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25)}
-[data-theme="dark"] .about-inline-attr{color:rgba(0,0,0,.35)}
 .pricing-note{margin-top:1px}
 .pricing-note>.inner,.services>.inner .pricing-note{max-width:none}
-.pricing-note-inner{background:var(--bg-off);border:1px solid var(--rule);padding:2.5rem 3rem;display:grid;grid-template-columns:1fr 2fr auto;gap:3rem;align-items:start}
-.pricing-note-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);padding-top:4px}
-.pricing-note-body p{font-size:15px;line-height:1.85;color:var(--text-2)}
-.pricing-note-body p+p{margin-top:.9rem}
-.pricing-note-cta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text);text-decoration:none;white-space:nowrap;padding-top:4px;border-bottom:1px solid var(--text);padding-bottom:2px;transition:opacity .2s}
+.pricing-note-inner{background:var(--bg-off);border:1px solid var(--rule);padding:2rem 2.5rem;display:grid;grid-template-columns:1fr 2fr auto;gap:3rem;align-items:center}
+.pricing-note-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3)}
+.pricing-note-body p{font-size:15px;line-height:1.7;color:var(--text-2)}
+.pricing-note-cta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text);text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--text);padding-bottom:2px;transition:opacity .2s}
 .pricing-note-cta:hover{opacity:.6}
+
 @media(max-width:1100px){.contact>.inner{grid-template-columns:1fr;gap:3rem}.form-row{grid-template-columns:1fr}}
 @media(max-width:900px){
   nav{padding:0}
@@ -450,6 +474,8 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .hero-inner{grid-template-columns:1fr}
   .ticker-bar{padding:11px 1.5rem}
   .problem>.inner,.services>.inner,.work>.inner,.about>.inner,.faq>.inner,.contact>.inner{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem}
+  .framework>.inner{grid-template-columns:1fr;gap:1.5rem;padding:3rem 1.5rem}
+  .framework-grid{grid-template-columns:1fr 1fr;margin-left:-1.5rem;margin-right:-1.5rem}
   footer>.inner{padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.5rem}
   .footer-logo{margin-bottom:.2rem}
   .footer-stack{flex-direction:column;gap:.15rem;align-items:flex-start}
@@ -457,8 +483,9 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .services-header,.work-header,.faq-header{grid-template-columns:1fr;gap:1.5rem}
   .services-grid{grid-template-columns:1fr;margin-left:-1.5rem;margin-right:-1.5rem}
   .pricing-note-inner{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
-  .svc-addon{flex-direction:column;gap:1.5rem;margin-left:-1.5rem;margin-right:-1.5rem;padding:2rem 1.5rem 2rem 2rem}
-  .scenario{grid-template-columns:1fr;gap:1rem}
+  .svc-addon{flex-direction:column;align-items:flex-start;gap:1.5rem;margin-left:-1.5rem;margin-right:-1.5rem;padding:2rem 1.5rem}
+  .scenario{grid-template-columns:1fr;gap:1.5rem}
+  .scenarios{gap:3.5rem}
   .form-row{grid-template-columns:1fr}
   footer>.inner{flex-direction:column;gap:.4rem;align-items:flex-start}
   .footer-logo{width:100%}
@@ -537,8 +564,6 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
         <hr class="hero-divider">
         <div class="hero-stat-row">
           <div class="hero-stat"><div class="hero-stat-num volt">Free</div><div class="hero-stat-label">First consult</div></div>
-          <div class="hero-stat"><div class="hero-stat-num">Remote</div><div class="hero-stat-label">Available too</div></div>
-          <div class="hero-stat"><div class="hero-stat-num">3</div><div class="hero-stat-label">Core services</div></div>
           <div class="hero-stat"><div class="hero-stat-num">1-on-1</div><div class="hero-stat-label">Direct with Josh</div></div>
         </div>
       </div>
@@ -586,6 +611,34 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 </div>
 </section>
 
+<section class="framework reveal" aria-label="Our spatial framework">
+<div class="inner">
+  <div class="framework-label">The Framework</div>
+  <div class="framework-grid">
+    <div class="framework-item">
+      <span class="framework-num">01</span>
+      <div class="framework-name">Flow</div>
+      <div class="framework-text">How customers move through the space, from arrival to exit.</div>
+    </div>
+    <div class="framework-item">
+      <span class="framework-num">02</span>
+      <div class="framework-name">Zoning</div>
+      <div class="framework-text">What happens where, and why each area earns its footprint.</div>
+    </div>
+    <div class="framework-item">
+      <span class="framework-num">03</span>
+      <div class="framework-name">Team Movement</div>
+      <div class="framework-text">How staff operate behind the scenes without breaking the front of house.</div>
+    </div>
+    <div class="framework-item">
+      <span class="framework-num">04</span>
+      <div class="framework-name">Conversion Points</div>
+      <div class="framework-text">Where customer decisions happen, and how the space supports them.</div>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="services reveal" id="services">
 <div class="inner">
   <div class="services-header">
@@ -601,6 +654,10 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
       <div class="svc-name">Spatial Strategy</div>
       <div class="svc-price">Starting from $1,500</div>
       <div class="svc-desc">Before finishes, before furniture, before anything aesthetic, we solve how your space needs to operate. Customer traffic flow, zoning, layout optimization, team movement. The logic layer that everything else is built on.</div>
+      <div class="svc-deliverable">
+        <span class="svc-deliverable-label">You receive</span>
+        A working floor plan concept, flow diagram, and zoning logic in a single document your contractor can build from. Typically 8&ndash;12 pages, delivered in 1&ndash;2 weeks.
+      </div>
       <div class="svc-tags"><span class="svc-tag">Space analysis</span><span class="svc-tag">Flow mapping</span><span class="svc-tag">Zoning plan</span><span class="svc-tag">Floor plan concept</span></div>
     </div>
     <div class="svc dark">
@@ -608,13 +665,17 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
       <div class="svc-name">Concept and Direction</div>
       <div class="svc-price">Starting from $2,500</div>
       <div class="svc-desc">Once the layout works, we make it feel right. Material palette, atmosphere, lighting direction, brand environment integration in three dimensions. A document your contractor and vendors can actually use.</div>
+      <div class="svc-deliverable">
+        <span class="svc-deliverable-label">You receive</span>
+        A finish palette, lighting direction, furniture concept, and brand environment document with specifications your contractor and vendors can source from. Delivered in 1&ndash;3 weeks.
+      </div>
       <div class="svc-tags"><span class="svc-tag">Finish palette</span><span class="svc-tag">Lighting direction</span><span class="svc-tag">Furniture concept</span><span class="svc-tag">Brand environment</span></div>
     </div>
     <div class="svc-addon">
       <div>
         <div class="svc-name">Implementation Support</div>
         <div class="svc-price">$150 / hr &nbsp;&middot;&nbsp; Add to any project</div>
-        <div class="svc-desc">On-site during key phases, vendor coordination, spec review, and real-time problem solving as your space comes to life.</div>
+        <div class="svc-desc">On-site during key phases, vendor coordination, spec review, and real-time problem solving as your space comes to life. Insurance for the investment you have already made in strategy.</div>
       </div>
       <a href="#contact" class="btn" style="flex-shrink:0;background:#0a0a0a;color:#fff;border-color:#0a0a0a;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:13px 22px;">Add to your project</a>
     </div>
@@ -624,9 +685,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
     <div class="pricing-note-inner">
       <div class="pricing-note-label">How pricing works</div>
       <div class="pricing-note-body">
-        <p>Every project is scoped individually after the free consultation. The starting prices above reflect a single defined space with a clear brief and a standard deliverable. Projects go up from there based on square footage, number of distinct zones, complexity of the existing layout, and the depth of deliverable required.</p>
-        <p>Most first-time clients start with Spatial Strategy, then add Concept and Direction once the floor plan logic is settled. Implementation Support gets added as needed during build-out.</p>
-        <p>There is no pitch in the first call. The goal is to understand your space and figure out together whether and how this makes sense.</p>
+        <p>Every project is scoped after the free consultation. Starting prices reflect a single defined space with a standard deliverable; final scope depends on square footage, number of zones, and complexity. No pitch on the first call &mdash; just a conversation about whether the project makes sense.</p>
       </div>
       <a href="#contact" class="pricing-note-cta">Book a free consultation &rarr;</a>
     </div>
@@ -641,59 +700,91 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
       <div class="section-tag">Worked Scenarios</div>
       <h2>How we<br>think.</h2>
     </div>
-    <p class="work-note">These are worked scenarios: real business types, real constraints, real decisions. They show how Blackrowe Spatial thinks through a project before recommending a single material or piece of furniture.</p>
+    <p class="work-note">Three worked scenarios. Real business types, real constraints, real decisions. Drag the handle on each to see how spatial strategy changes the answer.</p>
   </div>
   <div class="scenarios">
+
     <div class="scenario">
-      <div><div class="scenario-type">Wellness<br>Studio</div><div class="scenario-sqft">1,400 sq ft</div></div>
       <div>
-        <h3 class="scenario-title">New yoga and massage studio, strip mall lease</h3>
-        <p class="scenario-body">A long rectangular space with a single entrance. The challenge: create clear separation between retail, active studio, and treatment rooms without expensive construction, while delivering a calm, premium feel from the moment you walk in.</p>
-        <p class="scenario-note">Spatial concept / floor plan / finish direction</p>
-        
+        <div class="scenario-meta">
+          <div class="scenario-type">Wellness Studio</div>
+          <div class="scenario-sqft">1,400 sq ft &middot; strip mall lease</div>
+        </div>
+        <h3 class="scenario-title">Long rectangular space, single entrance. Three uses, no walls.</h3>
+        <p class="scenario-body">A new yoga and massage studio needs clear separation between retail, active studio, and treatment rooms &mdash; without expensive construction. The brief: deliver a calm, premium feel from the moment you walk in.</p>
+        <div class="scenario-claim">Retail placed at the flow peak, not the entry. Decompression zone slows arrival. Treatment rooms separated by built-ins, not walls.</div>
       </div>
-      <div class="challenge-list">
-        <div class="challenge"><span class="challenge-arrow">-></span>Entry zone slows arrival and signals transition from street to studio</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Treatment rooms acoustically separated using built-ins, not walls</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Retail placed at natural pause point in customer flow</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Natural light preserved and amplified throughout</div>
-        <div class="scenario-metric">Estimated outcome: retail at flow peak increases impulse purchase opportunity vs. entry placement; decompression zone reduces perceived wait time</div>
+      <div class="ba-slider" data-ba-slider>
+        <div class="ba-img-placeholder before">
+          <div>Before</div>
+          <div style="font-size:9px;opacity:.7">As-leased layout</div>
+        </div>
+        <div class="ba-after-wrap">
+          <div class="ba-img-placeholder after">
+            <div>After</div>
+            <div style="font-size:9px;opacity:.7">Strategic zoning</div>
+          </div>
+        </div>
+        <div class="ba-label before">Before</div>
+        <div class="ba-label after">After</div>
+        <div class="ba-handle" tabindex="0" role="slider" aria-label="Drag to reveal after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></div>
       </div>
     </div>
 
     <div class="scenario">
-      <div><div class="scenario-type">Independent<br>Cafe</div><div class="scenario-sqft">900 sq ft</div></div>
       <div>
-        <h3 class="scenario-title">First-time cafe owner, former retail space</h3>
-        <p class="scenario-body">High foot traffic corner location. Priorities: fast throughput at peak hours, a reason to stay and spend more, and a spatial identity that feels local and considered, not generic.</p>
-        <p class="scenario-note">Spatial concept / floor plan / finish direction</p>
-        
+        <div class="scenario-meta">
+          <div class="scenario-type">Independent Cafe</div>
+          <div class="scenario-sqft">900 sq ft &middot; former retail space</div>
+        </div>
+        <h3 class="scenario-title">High-traffic corner. Throughput at peak, dwell after.</h3>
+        <p class="scenario-body">A first-time cafe owner taking over a former retail unit. The brief: fast throughput at morning rush, a reason to stay and spend more midday, and a spatial identity that reads local, not generic.</p>
+        <div class="scenario-claim">Order and pickup separated to eliminate queue conflict. Seating zoned by dwell time. Merchandise placed at the natural exit pause.</div>
       </div>
-      <div class="challenge-list">
-        <div class="challenge"><span class="challenge-arrow">-></span>Order and pickup separated to eliminate queue conflict</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Seating zoned by dwell time: quick solo and lingering social</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Window seating activated as street-visible amenity</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Merchandise placed at natural exit pause point</div>
-        <div class="scenario-metric">Estimated outcome: separated queue reduces peak-hour friction; dwell-time zoning increases average ticket by encouraging secondary purchases</div>
+      <div class="ba-slider" data-ba-slider>
+        <div class="ba-img-placeholder before">
+          <div>Before</div>
+          <div style="font-size:9px;opacity:.7">Inherited retail layout</div>
+        </div>
+        <div class="ba-after-wrap">
+          <div class="ba-img-placeholder after">
+            <div>After</div>
+            <div style="font-size:9px;opacity:.7">Strategic zoning</div>
+          </div>
+        </div>
+        <div class="ba-label before">Before</div>
+        <div class="ba-label after">After</div>
+        <div class="ba-handle" tabindex="0" role="slider" aria-label="Drag to reveal after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></div>
       </div>
     </div>
 
     <div class="scenario">
-      <div><div class="scenario-type">Professional<br>Office</div><div class="scenario-sqft">2,200 sq ft</div></div>
       <div>
-        <h3 class="scenario-title">Boutique law firm, newly leased floor</h3>
-        <p class="scenario-body">A firm moving from shared space into its first dedicated floor. Needs to signal credibility from arrival while giving attorneys the privacy they require, without a closed-corridor feel.</p>
-        <p class="scenario-note">Spatial concept / floor plan / finish direction</p>
-        
+        <div class="scenario-meta">
+          <div class="scenario-type">Professional Office</div>
+          <div class="scenario-sqft">2,200 sq ft &middot; newly leased floor</div>
+        </div>
+        <h3 class="scenario-title">First dedicated floor. Credibility on arrival, privacy at work.</h3>
+        <p class="scenario-body">A boutique law firm moving from shared space into their first dedicated floor. The brief: signal credibility from the door, give attorneys privacy without a closed-corridor feel.</p>
+        <div class="scenario-claim">Reception as composed arrival. Conference room accessible without exposing working areas. Acoustic separation by material, not distance.</div>
       </div>
-      <div class="challenge-list">
-        <div class="challenge"><span class="challenge-arrow">-></span>Reception designed as a composed arrival, not a waiting room</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Conference room accessible to clients without exposing working areas</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Offices acoustically separated by material, not distance</div>
-        <div class="challenge"><span class="challenge-arrow">-></span>Finishes calibrated to signal expertise without coldness</div>
-        <div class="scenario-metric">Estimated outcome: client-facing zones signal credibility on arrival; acoustic separation enables focused work without costly construction</div>
+      <div class="ba-slider" data-ba-slider>
+        <div class="ba-img-placeholder before">
+          <div>Before</div>
+          <div style="font-size:9px;opacity:.7">As-leased floor</div>
+        </div>
+        <div class="ba-after-wrap">
+          <div class="ba-img-placeholder after">
+            <div>After</div>
+            <div style="font-size:9px;opacity:.7">Strategic zoning</div>
+          </div>
+        </div>
+        <div class="ba-label before">Before</div>
+        <div class="ba-label after">After</div>
+        <div class="ba-handle" tabindex="0" role="slider" aria-label="Drag to reveal after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></div>
       </div>
     </div>
+
   </div>
 </div>
 </section>
@@ -717,7 +808,8 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
     <h2>I think like a<br><span class="outline">business owner.</span></h2>
     <div class="about-body">
       <p>I'm Josh Pelham. I think about space the way an operator does: what needs to happen here, in what order, for which people, and what gets in the way of that. That is a different question than what most designers ask.</p>
-      <p>I have worked through every phase of a spatial project from concept through execution, not just the consulting layer. That end-to-end experience changes how you think about a space. You understand the cost of a bad early decision because you have had to live with one.</p>
+      <blockquote class="about-pullquote">I have worked through every phase of a spatial project from concept through execution, not just the consulting layer.</blockquote>
+      <p>That end-to-end experience changes how you think about a space. You understand the cost of a bad early decision because you have had to live with one.</p>
       <p>Most projects begin with a free consultation. No pitch, just a conversation about your space and what you are trying to accomplish.</p>
     </div>
     <div class="about-sig">Josh Pelham</div>
@@ -754,6 +846,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
     <div class="faq-item"><div class="faq-q">What does Blackrowe Spatial actually do?</div><div class="faq-a">Blackrowe Spatial helps businesses build commercial spaces that work: guiding customers, supporting staff, and expressing the brand clearly. Services include spatial strategy, design concept and finish direction, and implementation support.</div></div>
     <div class="faq-item"><div class="faq-q">Where are you located and what areas do you serve?</div><div class="faq-a">Based in Nevada City, California, in the Sierra Nevada foothills. We primarily serve clients in Sacramento, Reno, and the Lake Tahoe region, and are available for remote projects anywhere in the US.</div></div>
     <div class="faq-item"><div class="faq-q">How is this different from hiring an interior designer?</div><div class="faq-a">Most interior designers lead with aesthetics. Blackrowe Spatial leads with function: how the space needs to work for your specific business. Customer flow, zoning, conversion points, and operational logic come first. The aesthetic follows from that foundation.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you provide drawings I can give to my contractor?</div><div class="faq-a">Yes. Every project deliverable is built to be handed directly to your contractor, architect, or vendors. Spatial Strategy includes a floor plan concept with flow diagrams and zoning logic. Concept and Direction adds finish palettes, lighting direction, and brand environment documentation in a single document your team can build from.</div></div>
     <div class="faq-item"><div class="faq-q">What does it cost?</div><div class="faq-a">Spatial Strategy starts from $1,500. Concept and Direction starts from $2,500. Implementation Support is billed at $150/hr and can be added to any project. Final scope and pricing are confirmed after the free consultation, once we understand what your project actually needs.</div></div>
     <div class="faq-item"><div class="faq-q">How long does a project take?</div><div class="faq-a">Spatial Strategy typically takes one to two weeks from first conversation to deliverable. Concept and Direction adds another one to three weeks depending on scope and revision rounds. Implementation Support runs concurrently with your build and is billed by the hour as needed.</div></div>
     <div class="faq-item"><div class="faq-q">Do you work remotely?</div><div class="faq-a">Yes. Spatial Strategy and Concept and Direction can both be delivered remotely with strong results. Implementation Support requires on-site presence, which we offer within the Sacramento, Reno, and Tahoe region.</div></div>
@@ -766,7 +859,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   <div>
     <div class="section-tag">Contact</div>
     <h2>Start with a<br>conversation.</h2>
-    <p class="contact-body">The first step is free. No pitch, no commitment -- just a conversation.</p>
+    <p class="contact-body">The first step is free. No pitch, no commitment &mdash; just a conversation.</p>
     <div class="contact-details">
       <div class="contact-row"><span class="contact-row-label">Call or text</span><a href="tel:5305577879">530-557-7879</a></div>
       <div class="contact-row"><span class="contact-row-label">Address</span><span>313 Commercial St<br>Nevada City, CA 95959</span></div>
@@ -777,24 +870,15 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   </div>
   <div>
     <form class="form" id="contact-form" action="https://formspree.io/f/mnjlwngk" method="POST">
-      <div class="form-row">
-        <div class="form-field"><label for="fname">Your name</label><input type="text" id="fname" name="name" placeholder="Jane Smith" required></div>
-        <div class="form-field"><label for="business">Business name</label><input type="text" id="business" name="business" placeholder="Smith and Co."></div>
-      </div>
+      <div class="form-field"><label for="fname">Your name</label><input type="text" id="fname" name="name" placeholder="Jane Smith" required></div>
       <div class="form-field"><label for="email">Email address</label><input type="email" id="email" name="email" placeholder="jane@smithco.com" required></div>
       <div class="form-field"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="(530) 555-0100"></div>
-      <div class="form-row">
-        <div class="form-field">
-          <label for="sqft">Approximate square footage</label>
-          <input type="text" id="sqft" name="sqft" placeholder="e.g. 1,200 sq ft">
-        </div>
-        <div class="form-field">
-          <label for="type">Type of space</label>
-          <select id="type" name="type">
-            <option value="" disabled selected>Select one</option>
-            <option>Retail</option><option>Restaurant or cafe</option><option>Hospitality or wellness</option><option>Professional office</option><option>Other commercial</option>
-          </select>
-        </div>
+      <div class="form-field">
+        <label for="type">Type of space</label>
+        <select id="type" name="type">
+          <option value="" disabled selected>Select one</option>
+          <option>Retail</option><option>Restaurant or cafe</option><option>Hospitality or wellness</option><option>Professional office</option><option>Other commercial</option>
+        </select>
       </div>
       <div class="form-field"><label for="message">Tell me about your space</label><textarea id="message" name="message" placeholder="What are you working with, what is the challenge, and what are you trying to accomplish?"></textarea></div>
       <button type="submit" class="form-submit" id="submit-btn">Send message &rarr;</button>
@@ -818,7 +902,6 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
 </footer>
 
 <script>
-// HAMBURGER
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 function closeMenu(){
@@ -866,6 +949,69 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20)},{passive:true});
 const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.06});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// BEFORE/AFTER SLIDERS
+document.querySelectorAll('[data-ba-slider]').forEach(slider => {
+  const handle = slider.querySelector('.ba-handle');
+  const afterWrap = slider.querySelector('.ba-after-wrap');
+  let dragging = false;
+
+  function setPosition(clientX) {
+    const rect = slider.getBoundingClientRect();
+    let pct = ((clientX - rect.left) / rect.width) * 100;
+    pct = Math.max(0, Math.min(100, pct));
+    handle.style.left = pct + '%';
+    afterWrap.style.width = pct + '%';
+    handle.setAttribute('aria-valuenow', Math.round(pct));
+  }
+
+  function onDown(e) {
+    dragging = true;
+    slider.style.cursor = 'ew-resize';
+    e.preventDefault();
+  }
+  function onMove(e) {
+    if (!dragging) return;
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    setPosition(x);
+  }
+  function onUp() {
+    dragging = false;
+    slider.style.cursor = '';
+  }
+
+  handle.addEventListener('mousedown', onDown);
+  handle.addEventListener('touchstart', onDown, { passive: false });
+  slider.addEventListener('mousedown', (e) => {
+    if (e.target === handle) return;
+    onDown(e);
+    setPosition(e.clientX);
+  });
+  slider.addEventListener('touchstart', (e) => {
+    if (e.target === handle) return;
+    onDown(e);
+    setPosition(e.touches[0].clientX);
+  }, { passive: false });
+
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('touchmove', onMove, { passive: true });
+  document.addEventListener('mouseup', onUp);
+  document.addEventListener('touchend', onUp);
+
+  handle.addEventListener('keydown', (e) => {
+    const current = parseInt(handle.getAttribute('aria-valuenow')) || 50;
+    let next = current;
+    if (e.key === 'ArrowLeft') next = Math.max(0, current - 5);
+    if (e.key === 'ArrowRight') next = Math.min(100, current + 5);
+    if (next !== current) {
+      handle.style.left = next + '%';
+      afterWrap.style.width = next + '%';
+      handle.setAttribute('aria-valuenow', next);
+      e.preventDefault();
+    }
+  });
+});
+
 const form=document.getElementById('contact-form');
 const sMsg=document.getElementById('form-success');
 const sBtn=document.getElementById('submit-btn');
