@@ -250,7 +250,7 @@ h1 .ember{color:var(--volt)}
 [data-theme="dark"] .hero-stat-label{color:rgba(255,255,255,.35)}
 .hero-right-cta{margin-top:2rem}
 .ticker-bar{background:var(--bg-inv);overflow:hidden;border-top:1px solid rgba(255,255,255,.06);touch-action:none;pointer-events:none}
-.ticker-bar>.inner{display:flex;align-items:center;padding:7px 4rem;gap:2.5rem;justify-content:center;overflow:hidden;flex-wrap:nowrap}
+.ticker-bar>.inner{display:flex;align-items:center;padding:7px 0.5rem;gap:1.5rem;justify-content:center;overflow:hidden;flex-wrap:nowrap}
 .ticker-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap;flex-shrink:0}
 .ticker-dot{width:4px;height:4px;background:var(--volt);border-radius:50%;flex-shrink:0}
 
@@ -475,7 +475,7 @@ nav>.inner{display:flex;justify-content:space-between;align-items:center;width:1
   .hero-right{display:none}
   .hero-left{padding:3.5rem 1.5rem 3rem;border-right:none}
   .hero-inner{grid-template-columns:1fr}
-  .ticker-bar>.inner{padding:11px 1.5rem}
+  .ticker-bar>.inner{padding:11px 1rem;gap:1rem}
   .problem>.inner,.services>.inner,.work>.inner,.about>.inner,.faq>.inner,.contact>.inner{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem}
   .framework>.inner{grid-template-columns:1fr;gap:1.5rem;padding:3rem 1.5rem}
   .framework-grid{grid-template-columns:1fr 1fr;margin-left:-1.5rem;margin-right:-1.5rem}
@@ -1023,9 +1023,10 @@ function fitTicker() {
   const bar = document.querySelector('.ticker-bar .inner');
   if (!bar) return;
   const items = Array.from(bar.querySelectorAll('.ticker-item'));
-  const GAP = 40; // 2.5rem at 16px
+  const GAP = 24; // 1.5rem at 16px
   items.forEach(i => i.style.display = 'flex');
-  const available = bar.clientWidth - 128; // subtract 4rem padding each side
+  const cs = window.getComputedStyle(bar);
+  const available = bar.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
   // Find how many items fit with fixed gap
   let total = 0;
   let fitting = 0;
